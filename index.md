@@ -2,6 +2,19 @@
 layout: default
 ---
 
+# Hello there!
+
+I'm a current student at Columbia Basin College, all set to graduate in December 2021 with my BAS in Cyber Security. This isn't my first rodeo through school, though. I started by getting a bachelor's in Geology at Brigham Young University - Idaho, then I went on to get my master's in Geology from Baylor University. I spent a few years teaching an online natural disasters course, submitting countless resumes for positions in a failing field, and working at a rental car agency. Eventually, I decided it was time to gain some education and skills in a different arena.
+
+Now, I'm in an internship at Pacific Northwest National Laboratory through the SULI program. I also work for Marcraft/ETG, a company that develops training courses with hands-on equipment. They sell to educators, not to students, so they're often selling an entire course, which comes with a textbook, lab book, and a whole kit of devices, like a pre-configured Raspberry Pi, a laptop with Kali and Windows, several routers, a server, etc. At Marcraft I am editing and writing labs for their course in Industrial Control System Cyber Security. Unfortunately, my work at Marcraft will be put on hold during my internship with PNNL.
+
+I'm a very busy man right now! In addition to these jobs, I also work for CBC as an adjunct instructor teaching Geology 101 online. I'm also the president of our campus cyber security club: the Cyberhawks. I'm a husband, and the proud father of six kids!
+
+
+
+
+
+
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
 [Link to another page](./another-page.html).
