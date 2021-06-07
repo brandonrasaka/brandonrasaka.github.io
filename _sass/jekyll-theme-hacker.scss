@@ -78,7 +78,7 @@ header h1 {
 
 
 header h1:before {
-  content: "./ ";
+  content: "./";
   font-size: 24px;
 }
 
@@ -88,11 +88,32 @@ header h2 {
   color: #666;
 }
 
-#downloads .btn {
+downloads .btn {
   display: inline-block;
   text-align: center;
   margin: 0;
+  //float: right;
 }
+
+nav.main-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+  font-size: 24px;
+}
+
+nav.main-nav li,
+nav.main-nav a {
+	display: inline-block;
+  padding: 10px;
+}
+
+a.active {
+  color: #b5e853;
+}
+
+
 
 /* Main Content
 */
@@ -239,9 +260,10 @@ hr {
   background: url("../images/blacktocat.png") 0 0 no-repeat;
 }
 
-/* Links
-   a, a:hover, a:visited
-*/
+// Links
+   a:hover {
+     color:#999
+   }
 
 a {
   color: #63c0f5;
