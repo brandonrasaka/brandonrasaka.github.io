@@ -270,6 +270,15 @@ a {
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
+svg {
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border-radius: 50px;
+  background: url("../images/github.svg") 0 0 no-repeat;
+  fill: white;
+}
+
 /* Clearfix */
 
 .cf:before, .cf:after {
