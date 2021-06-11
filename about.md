@@ -6,24 +6,32 @@ nav_order: 3
 
 # Me, at a glance
 
-This isn't my first rodeo through school. I started by getting a bachelor's in Geology at Brigham Young University - Idaho, then I went on to get my master's in Geology from Baylor University. I spent a few years teaching an online natural disasters course, submitting countless resumes for positions in a failing field, and working at a rental car agency. Eventually, I decided it was time to gain some education and skills in a different arena.
+Though I'm currently getting my BAS in cybersecurity, this isn't my first rodeo through school. I started by getting a bachelor's in Geology at Brigham Young University - Idaho, then I went on to get my master's in Geology from Baylor University. I spent a few years teaching an online natural disasters course, submitting countless resumes for positions in a failing field, and working at a rental car agency. Eventually, I decided it was time to gain some education and skills in a different arena.
 
 Now, I'm in an internship at Pacific Northwest National Laboratory through the SULI program. I also work for Marcraft/ETG, a company that develops training courses with hands-on equipment. They sell to educators, not to students, so they're often selling an entire course, which comes with a textbook, lab book, and a whole kit of devices, like a pre-configured Raspberry Pi, a laptop with Kali and Windows, several routers, a server, etc. At Marcraft I am editing and writing labs for their course in Industrial Control System Cyber Security. Unfortunately, my work at Marcraft will be put on hold during my internship with PNNL.
 
-I'm a very busy man right now! In addition to these jobs, I also work for CBC as an adjunct instructor teaching Geology 101 online. I'm also the president of our campus cyber security club: the Cyberhawks. I'm a husband, and the proud father of six kids!
+I'm a very busy man right now! In addition to these jobs, I also work for CBC as an adjunct instructor teaching Geology 101 online. I'm also the president of our campus cybersecurity club: the Cyberhawks. I'm a husband, and the proud father of six kids!
 
 
-# Cybersecurity
+# My Path to Cybersecurity
 
 Is it "cyber security" (two words) or "cybersecurity" (one word)?
 Most people probably couldn't care less, but pride myself on precise language. I went back and forth a lot, then I decided to settle on "cybersecurity" (one word), because that's the way it's use by NIST.
 
-...This is how I got into cybersecurity
+So, how does someone with a master's in geology and six kids decide to go _back_ to school and get a degree in cybersecurity? Well, the short version of the story is this. After graduating with my MS degree, I spent 2.5 years applying for hundreds of positions related to geology. Geologist, staff geologist, assistant geologist, environmental planner, geographic information systems specialist, geology instructor (community college), etc.
+
+I had very few call backs, let alone interviews. I made it to the top 2 candidates for a position with a GIS company called Eagle Eye, but they picked the candidate who had experience working with governments. For much of that time I was working as an online adjunct instructor teaching a natural disasters course.
+
+Eventually I decided I needed to get a full-time job doing anything, regardless of its relation to my degree, which led me to working at Enterprise Rent A Car. During my tenure there I continued to look for geology-related jobs, but I really dove into the job to make the most out of it. That helped me learn a lot about business and sales, but I still felt out of place.
+
+I spent much of those years introspectively thinking about what really interested me about geology, what makes me tick. Was it the rocks, or was it something more fundamental? In the process I learned a few things about myself. I learned that I really enjoy solving problems and puzzles. I like data analysis and finding patterns. I like to build things and the satisfaction that comes when finally finishing a project that works.
+
+But I also learned that I care about people. I care about my family, my community, and my country. I care about helping people live meaningful, productive lives. I care about protecting our rights to life, liberty, and property. Putting all that together led me to cybersecurity.
 
 
 # Other Interests
 
-In addition to cyber security, I have a lot of other interests. I have been in love with the outdoors since I was a kid and have come to an even greater appreciation for the Earth as I've come to understand the processes that shape it. As part of my interest in geology, I am semi-active on my YouTube channel Geology Guy, though I don’t often have the time to dedicate to it.
+In addition to cybersecurity, I have a lot of other interests. I have been in love with the outdoors since I was a kid and have come to an even greater appreciation for the Earth as I've come to understand the processes that shape it. As part of my interest in geology, I am semi-active on my YouTube channel Geology Guy, though I don’t often have the time to dedicate to it.
 
 ## Geology
 
