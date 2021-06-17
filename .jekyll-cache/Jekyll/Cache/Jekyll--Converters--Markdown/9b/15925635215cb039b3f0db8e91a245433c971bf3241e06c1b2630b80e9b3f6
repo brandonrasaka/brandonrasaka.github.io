@@ -1,0 +1,31 @@
+I"�
+<h2 id="here-are-some-of-the-projects-ive-worked-on">Here are some of the projects I’ve worked on</h2>
+
+<ul>
+  
+    <li>
+      <h2><a href="/2021/06/14/network-vms-together/">Home Virtual Lab: Networking Virtual Machines Together on VirtualBox</a></h2>
+      <p>I was lucky enough to buy a couple of extra computers from an auction, but usually having extra computers and networking computers for experimenting and penetration testing just isn’t feasible for students. In my <a href="% post_url 2021-06-13-install-virtual-machines %">previous project</a>, I gave instructions on how to install virtual machines in preparation to set up a virtual lab using Oracle VirtualBox.</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2021/06/13/install-virtual-machines/">Home Virtual Lab: Installing Virtual Machines on VirtualBox</a></h2>
+      <p>I was lucky enough to buy a couple of extra computers from an auction, but usually having extra computers and networking computers for experimenting and penetration testing just isn’t feasible for students. So, here are instructions on how to install virtual machines in preparation to set up a virtual lab using Oracle VirtualBox.</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2021/05/30/Defending-an-IT-OT-Network-Against-Remote-Code-Execution.html">Defending an IT/OT Network Against Remote Code Execution</a></h2>
+      <p><strong>Abstract:</strong> Defending information and operational technology networks is of vital importance. As has been demonstrated in attacks such as the Colonial Pipeline incident, the Stuxnet attack on an Iranian nuclear facility, and the Russian attack on Ukraine’s power grid, vulnerable critical infrastructure and industrial systems are extremely costly, both in terms of money as well as in human life. In this project, I set up a physical testbed environment with built-in vulnerabilities to demonstrate a successful penetration from outside of a private network. I exploited an open logical port and weak passwords to gain access to a computer with control over an industrial process. Based on the results of this experiment, I proposed and implemented several solutions to harden the network against similar attacks.</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2021/05/01/physical-network-testing-environment.html">Physical Network Testing Environment</a></h2>
+      <p>My work at Marcraft has been setting up a physical testing environment for Industrial Control Systems (ICS) cyber security. Most of the time, when people set up a cyber security testing environment, it is a virtual one, either through virtualization software like VMware or VirtualBox. However, we wanted to be as realistic as possible, so we made sure to use real, physical devices and cables.</p>
+
+    </li>
+  
+</ul>
+:ET

@@ -1,0 +1,8 @@
+- url: "http://jekyllrb.com/"
+  title: "Jekyll"
+
+- url: "https://github.com/"
+  title: "Github"
+
+- url: "https://pages-themes.github.io/hacker/"
+  title: "Hacker Theme"  

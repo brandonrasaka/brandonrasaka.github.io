@@ -115,6 +115,10 @@ end
 <dd>Green</dd>
 </dl>
 
+Use HTML and CSS to make a Linux-style Terminal box
+
+<pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> cat /etc/passwd</code></pre>
+
 ```
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```

@@ -12,6 +12,7 @@ Now, I'm in an internship at Pacific Northwest National Laboratory through the S
 
 I'm a very busy man right now! In addition to these jobs, I also work for CBC as an adjunct instructor teaching Geology 101 online. I'm also the president of our campus cybersecurity club: the Cyberhawks. I'm a husband, and the proud father of six kids!
 
+![Me and my family having fun together](/assets/images/family-tree.jpg)
 
 # My Path to Cybersecurity
 
@@ -33,14 +34,73 @@ But I also learned that I care about people. I care about my family, my communit
 
 In addition to cybersecurity, I have a lot of other interests. I have been in love with the outdoors since I was a kid and have come to an even greater appreciation for the Earth as I've come to understand the processes that shape it. As part of my interest in geology, I am semi-active on my YouTube channel Geology Guy, though I don’t often have the time to dedicate to it.
 
+## Outdoors
+
+I love camping and hiking! My ideal vacation involves tent camping and going on hikes to beautiful mountain vistas. The best views you have to hike to, you can't just drive up to them. I grew up in the Willamette Valley of Oregon and lived there until I was 23. I was in the Cub Scouts and Boy Scouts and had a ton of fun camping and hiking in the central Oregon Cascades, mostly in the Santiam Pass. I’ve hiked all around the north, west, and south sides of Mount Jefferson, and I climbed to the very top of a mountain called Three-Fingered Jack. Its summit is so narrow only two people can stand at the top at a time!
+
+I've also been to _many_ places in about a 150-mile radius surrounding Idaho Falls, Idaho, like Yellowstone, the Tetons, Craters of the Moon, Stanley, the Grand Canyon, etc.
+
+![Hiking the Grand Canyon](/assets/images/grand-canyon.jpg)
+
 ## Geology
 
-I grew up in the Willamette Valley of Oregon and lived there until I was 23. I was in the Cub Scouts and Boy Scouts and had a ton of fun camping and hiking in the central Oregon Cascades, mostly in the Santiam Pass. I’ve hiked all around the north, west, and south sides of Mount Jefferson, and I climbed to the very top of a mountain called Three-Fingered Jack. Its summit is so narrow only two people can stand at the top at a time!
+My love for the outdoors, along with a keen interest in science inevitably led me to study geology. I like to say that everybody likes geology, but nobody cares about it. For example, I've never talked to someone who wasn't fascinated by volcanoes. But unless they study geology, they're not usually all that interested in discussing the differences in the chemical composition between basalt and granite.
+
+And it seems like a lot of people misunderstand what geology is really about. It's not just rocks, it's understanding the natural physical and chemical processes that shape the Earth. But different processes produce different rocks with different characteristics, so geologists use those characteristics like a detective uses clues in a crime scene.
+
+But what's cool about these details is that geologists have been able to reconstruct the shape, location, and movement of the continents over the past billion years! And you might think, "That's cool, but who cares?" but we can predict where to find precious resources with such knowledge.
+
+I could keep going, but I won't. Instead, I'll invite you to my YouTube channel, [Geology Guy](https://www.youtube.com/channel/UCxgu9ewOm0o5PVE-Ya75aFg) (and hopefully I'll have time soon to add to it!). You might also be interested to know that I teach Geology 101 in an online course for Columbia Basin College in Pasco, Washington. I use the Canvas LMS and have written my own curriculum a textbook/labbook called [Earth Lab](https://www.amazon.com/Earth-Lab-Exploring-Sciences/dp/053873700X) and hands-on activities.
 
 ## Artistic Endeavors
 
-I play the guitar and sing for fun, and I love jamming out to classic rock music.
+I play the guitar and sing for fun, and I love jamming out to classic rock music. I'm far from an expert, but I think I'm not too bad. I only have a Fender acoustic now, but I used to have an electric guitar as well. I'm a decent visual artist too. I used to draw _a ton_ when I was younger and I still more-or-less have the talent. These days though, if I'm doing any kind of visual art, I'm usually doing graphic design on Adobe Illustrator.
+
+I'm also into writing. I currently have three different stories in the works, though who knows when I'll ever get around to finishing them. One is a murder mystery set in a fictional ancient era in which the lead investigator discovers a plot to overthrow the government. Another is a serial killer thriller novel set in modern times. And the other is an epic fantasy with dragons and magic.
 
 ## Literature
 
-I really like reading (usually listening to audiobooks, actually), especially fantasy and science-fiction, though I enjoy a wide range of books. I'm a huge Star Wars fan (I'm sure you fellow Star Wars fans recognize my greeting on my homepage), though I enjoy Star Trek as well. Brandon Sanderson is my favorite author of fiction, but I also like works by Robert Jordan, Douglas Adams, Lee Child, Tolkien, Pierce Brown, Richard Stark, Andy Weir, and many more. In addition to fiction, I greatly appreciate non-fiction works as well, such as 12 Rules for Life: An Antidote to Chaos by Jordan B. Peterson, The Dictator’s Handbook: Why Bad Behavior is Almost Always Good Politics by Bruce Bueno de Mesquita and Alastair Smith, and A Short History of Nearly Everything by Bill Bryson.
+I really like reading (usually listening to audiobooks, actually), especially fantasy and science-fiction, though I enjoy a wide range of books. I'm a huge Star Wars fan (I'm sure you fellow Star Wars fans recognize my greeting on my homepage), though I enjoy Star Trek as well. Brandon Sanderson is my favorite author of fiction, but I also like works by Robert Jordan, Douglas Adams, Lee Child, Tolkien, Pierce Brown, Richard Stark, Andy Weir, and many more. In addition to fiction, I greatly appreciate non-fiction works as well, in the realm of philosophy and politics. Here's a list of my favorite works:
+
+### Fiction
+
+*	Mistborn series, Brandon Sanderson
+*	Warbreaker, Brandon Sanderson
+*	Elantris, Brandon Sanderson
+*	Stormlight Archive, Brandon Sanderson
+*	The Wheel of Time series, Robert Jordan and Brandon Sanderson
+*	Skyward series, Brandon Sanderson
+*	Hitchhiker’s Guide to the Galaxy, Douglas Adams
+*	Jack Reacher series, Lee Child
+*	The Hobbit, J.R.R. Tolkien
+*	The Lord of the Rings, J.R.R. Tolkien
+*	Raven’s Shadow trilogy, Anthony Ryan
+*	Red Rising series, Pierce Brown
+*	Alan Grofield novels (The Damsel, The Dame, The Blackbird), Richard Stark
+*	The Martian, Andy Weir
+*	Artemis, Andy Weir
+*	The Fold, Peter Clines
+*	The Dark Tower series, Stephen King
+*	Legends of the First Empire series, Michael J. Sullivan
+*	The Farseer Trilogy, Robin Hobb
+*	Private, James Patterson and Maxine Paetro
+*	Jurassic Park, Michael Crichton
+*	Career of Evil, Robert Galbraith
+*	Chronicles of the Unhewn Throne, Brian Stavely
+*	The Reckoners series, Brandon Sanderson
+*	Chronicles of Narnia, C.S. Lewis
+*	Harry Potter series, J.K. Rowling
+*	14, Peter Clines
+*	The Powder Mage trilogy, Brian McClellan
+*	Ready Player One, Ernest Cline
+*	The Lost Symbol, Dan Brown
+
+### Non-Fiction
+*	12 Rules for Life: An Antidote to Chaos, Jordan B. Peterson
+*	Beyond Order: 12 More Rules for Life, Jordan B. Peterson
+*	The Dictator’s Handbook, Bruce Bueno de Mesquita and Alastair Smith
+*	A Short History of Nearly Everything, Bill Bryson
+*	I, Pencil, Leonard E. Read
+*	Mere Christianity, C.S. Lewis
+*	The Four Loves, C.S. Lewis
+*	Beneath a Scarlet Sky, Mark Sullivan
