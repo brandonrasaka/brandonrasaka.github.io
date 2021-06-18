@@ -1,0 +1,27 @@
+I"v<p>I was lucky enough to buy a couple of extra computers from an auction, but usually having extra computers and networking computers for experimenting and penetration testing just isn’t feasible for students. In my <a href="/2021/06/13/install-virtual-machines/">previous project</a>, I gave instructions on how to install virtual machines in preparation to set up a virtual lab using Oracle VirtualBox. Here I’m going to explain how to actually allow them to talk to each other and to the Internet.</p>
+
+<blockquote>
+  <p>I’ll expand on this project page later to explain some of the <em>why</em>’s, but I wanted to get the steps out there right away.</p>
+</blockquote>
+
+<p>Assuming you already have 2 VMs, we’re going to start by allowing each of them to talk to the Internet.</p>
+
+<ul>
+  <li>If the VM is running, shut it down (don’t just save the machine state, but actually turn it off)</li>
+  <li>With the VM highlighted in VirtualBox, go to <strong>Settings &gt; Network</strong> and make sure the <strong>Enable Network Adapter</strong> box is checked. By default, it should be.</li>
+  <li>Also by default, the <em>Attached to</em> drop-down menu should be on <strong>NAT</strong>. If not, select <strong>NAT</strong>. This will allow the VM to get to the Internet</li>
+  <li>Go ahead and click <strong>OK</strong> to save the settings, then start the VM to check</li>
+  <li>Open a web browser and check if you can reach the Internet</li>
+  <li>Now run <code class="language-plaintext highlighter-rouge">ifconfig</code> (for Linux) or <code class="language-plaintext highlighter-rouge">ipconfig</code> (for Windows) to discover your IP address. It should be 10.0.2.15, since that’s the default for the <em>NAT</em> network option</li>
+</ul>
+
+<p>Alright, good. Now it’s time to let them talk to each other.</p>
+
+<ul>
+  <li>Shut down the VMs again, then open up the Network settings for each one</li>
+  <li>In VirtualBox, click <strong>File &gt; Host Network Manager</strong></li>
+  <li></li>
+  <li>Click on the <strong>Adapter 2</strong> tab and enable it with the checkbox</li>
+  <li>Now, attach <em>this</em> adapter to the Host</li>
+</ul>
+:ET
