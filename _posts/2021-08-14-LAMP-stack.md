@@ -21,6 +21,11 @@ Alright, here we go!
 ## Set up the DVWA
 
 1.	Download the VirtualBox OVA file from [Linux Images](https://www.linuxvmimages.com/images/centos-7)
+
+    Note: 
+    
+    > I used the Minimal Install to save on storage and memory resources, but you can use a desktop environment if you want
+
 2.	Import the VM from the OVA file
     * Open VirtualBox and click **File > Import Appliance**
     * Click the **Browse** icon and locate the OVA file, then click **Import**
@@ -36,9 +41,15 @@ Alright, here we go!
     | SSH  | TCP      | 127.0.0.1 | 22        | 10.0.2.15 | 22         |
 
     * Click **OK**, then click **OK** again
+
+    ![VM Network Configuration](/assets/images/vm-network-settings.png)
+
 4.	Take a snapshot
     * With the VM highlighted, click the icon on the right side with 3 dots and horizontal lines, then click Snapshots
     * On the new screen, click **Take**, then give it a name such as _Fresh Install_, then any comments if you wish
+
+    ![VM Snaptshot](/assets/images/vm-snapshot.png)
+
 5.	Start the VM and login with the following credentials:
     * User: centos
     * Password: centos
@@ -64,9 +75,9 @@ Alright, here we go!
 
     <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo mysql_secure_installation</code></pre>
 
-    * When prompted for root password, simply press **ENTER**
-    * When asked to if you want to create a root password, enter **y**, then enter a password
-    * Press **y** at each prompt to remove some sample users and databases and disable remote root logins
+    * When prompted for root password, simply press `ENTER`
+    * When asked to if you want to create a root password, enter `y`, then enter a password
+    * Press `y` at each prompt to remove some sample users and databases and disable remote root logins
 
 15.	Enable MariaDB to start on boot:
 
@@ -96,7 +107,7 @@ Alright, here we go!
 
 22.	Reload the privileges table and exit:
 
-    <pre
+    <pre>
     <code><span style="color:rgba(255, 255, 255, 0.5)">>></span> flush privileges;</code>
     <code><span style="color:rgba(255, 255, 255, 0.5)">>></span> exit</code>
     </pre>
@@ -110,7 +121,7 @@ Alright, here we go!
     allow_url_include = On
     ```
 
-26.	Press **ctrl+x**, then **y**, then **ENTER** to exit and save changes
+26.	Press `ctrl + x`, then `y`, then `ENTER` to exit and save changes
 
 28.	Download the DVWA files:
 
@@ -191,7 +202,7 @@ For my style, I wanted to change the colors to a blood red and change the logo t
     <code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo nano dvwaPage.inc.php</code>
     </pre>
 
-    * On line 302 (press **alt+c** to display line numbers), add **width=\"150\"**  to the line so that it reads:
+    * On line 302 (press `alt + c` to display line numbers), add **width=\"150\"**  to the line so that it reads:
     ```
     <img src=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\” width=\"150\" />
     ```
