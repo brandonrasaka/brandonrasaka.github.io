@@ -1,0 +1,298 @@
+I"36<p>Currently, I’m working for both Pacific Northwest National Laboratory and Marcraft, an Educational Technologies Group company. For both jobs recently, I had the opportunity to set up multiple web servers in Linux. For one of these projects I also set up a whole LAMP stack and the Damn Vulnerable Web Application (DVWA), but I wanted to customize it with a new look. I also wanted to have a fake front end website that has a link for “employees” to login with, which would take them to the DVWA login page.</p>
+
+<p>For starters, I’m most familiar with Ubuntu and CentOS 7, so I started this project in Ubuntu (not Ubuntu Server, which was probably a mistake). I tried and failed probably 5 times to get MySQL or MariaDB set up! So then I used CentOS 7 and it worked. Soon I’ll do it all again either with CentOS Stream or with Rocky, but for now it’s CentOS 7.</p>
+
+<p>A few things to note:</p>
+<ul>
+  <li>Somebody else created the web files for the front end for me, I just added them to the right directories.</li>
+  <li>I’m working on a Windows 10 machine running VirtualBox and building the server on a VM</li>
+  <li>I’m writing this as a step-by-step tutorial</li>
+  <li>Turns out the boss wanted the VM on Hyper-V, so there’s instructions for how to convert it for Hyper-V</li>
+</ul>
+
+<p>Alright, here we go!</p>
+
+<hr />
+
+<h2 id="set-up-the-dvwa">Set up the DVWA</h2>
+
+<ol>
+  <li>Download the VirtualBox OVA file from <a href="https://www.linuxvmimages.com/images/centos-7">Linux Images</a></li>
+  <li>Import the VM from the OVA file
+    <ul>
+      <li>Open VirtualBox and click <strong>File &gt; Import Appliance</strong></li>
+      <li>Click the <strong>Browse</strong> icon and locate the OVA file, then click <strong>Import</strong></li>
+    </ul>
+  </li>
+  <li>Change the <strong>Network Adapter</strong>
+    <ul>
+      <li>Open the VM <strong>Settings</strong></li>
+      <li>Click <strong>Network</strong>, then select <strong>NAT</strong> from the <strong>Attached to:</strong> dropdown menu</li>
+      <li>Click the right-pointing arrow next to <em>Advanced</em>, then click <strong>Port Forwarding</strong></li>
+      <li>Click the icon to add two new rules, then use the variables in the table below:</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">Protocol</th>
+          <th style="text-align: left">Host IP</th>
+          <th style="text-align: left">Host Port</th>
+          <th style="text-align: left">Guest IP</th>
+          <th style="text-align: left">Guest Port</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">HTTP</td>
+          <td style="text-align: left">TCP</td>
+          <td style="text-align: left">127.0.0.1</td>
+          <td style="text-align: left">80</td>
+          <td style="text-align: left">10.0.2.15</td>
+          <td style="text-align: left">80</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SSH</td>
+          <td style="text-align: left">TCP</td>
+          <td style="text-align: left">127.0.0.1</td>
+          <td style="text-align: left">22</td>
+          <td style="text-align: left">10.0.2.15</td>
+          <td style="text-align: left">22</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>Click <strong>OK</strong>, then click <strong>OK</strong> again</li>
+    </ul>
+  </li>
+  <li>Take a snapshot
+    <ul>
+      <li>With the VM highlighted, click the icon on the right side with 3 dots and horizontal lines, then click Snapshots</li>
+      <li>On the new screen, click <strong>Take</strong>, then give it a name such as <em>Fresh Install</em>, then any comments if you wish</li>
+    </ul>
+  </li>
+  <li>Start the VM and login with the following credentials:
+    <ul>
+      <li>User: centos</li>
+      <li>Password: centos</li>
+    </ul>
+  </li>
+  <li>
+    <p>Update the repositories, then install the needed packages:</p>
+
+    <pre>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo yum update</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo yum install nano git httpd mariadb-server mariadb php php-mysql php-gd</code>
+</pre>
+  </li>
+  <li>
+    <p>Start the Apache service and allow it to start automatically on reboot:</p>
+
+    <pre>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo systemctl start httpd.service</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo systemctl enable httpd.service</code>
+</pre>
+  </li>
+  <li>
+    <p>Start the database service:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo systemctl start mariadb</code></pre>
+  </li>
+  <li>
+    <p>Run the MySQL security script:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo mysql_secure_installation</code></pre>
+
+    <ul>
+      <li>When prompted for root password, simply press <strong>ENTER</strong></li>
+      <li>When asked to if you want to create a root password, enter <strong>y</strong>, then enter a password</li>
+      <li>Press <strong>y</strong> at each prompt to remove some sample users and databases and disable remote root logins</li>
+    </ul>
+  </li>
+  <li>
+    <p>Enable MariaDB to start on boot:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo systemctl enable mariadb.service</code></pre>
+  </li>
+  <li>
+    <p>Restart the Apache service:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo systemctl restart httpd.service</code></pre>
+  </li>
+  <li>
+    <p>Open MariaDB to create the DVWA database:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> mysql -u root -p</code></pre>
+
+    <ul>
+      <li>Enter the password you entered in step 12b above</li>
+    </ul>
+  </li>
+  <li>
+    <p>Create the database:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">&gt;&gt;</span> create database dvwadb;</code></pre>
+
+    <blockquote>
+      <p>This can be any name, but whatever you use, take note – it must match a configuration file later on.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Create DVWA database user with all the privileges assigned on the DVWA database:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">&gt;&gt;</span> grant all on dvwadb.* to dvwamgr@localhost identified by 'mypassword';</code></pre>
+
+    <blockquote>
+      <p>Again, the username (dvwamgr) and password (mypassword) can be whatever, as long as you take note of it and match it to the config file</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Reload the privileges table and exit:</p>
+
+    <p>&lt;pre
+<code><span style="color:rgba(255, 255, 255, 0.5)">&gt;&gt;</span> flush privileges;</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">&gt;&gt;</span> exit</code>
+&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>Open the <em>php.ini</em> file, then edit the specified lines as necessary:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo nano /etc/php.ini</code></pre>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allow_url_fopen = On
+allow_url_include = On
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Press <strong>ctrl+x</strong>, then <strong>y</strong>, then <strong>ENTER</strong> to exit and save changes</p>
+  </li>
+  <li>
+    <p>Download the DVWA files:</p>
+
+    <pre>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> cd /var/www/html</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo git clone https://github.com/ethicalhack3r/DVWA</code>
+</pre>
+  </li>
+  <li>
+    <p>Rename the sample configuration file, then open it and edit the following variables to match the database name, username, and password you used above:</p>
+
+    <pre>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> cd /var/www/html/DVWA/config</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo cp config.inc.php.dist config.inc.php</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo nano config.inc.php</code>
+</pre>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$_DVWA[ 'db_database' ] = 'dvwadb';
+$_DVWA[ 'db_user' ]     = 'dvwamgr';
+$_DVWA[ 'db_password' ] = 'mypassword';
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Restart the database and web services:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo systemctl restart mariadb httpd</code></pre>
+  </li>
+  <li>
+    <p>Configure SELinux with the following commands:</p>
+
+    <pre>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo setsebool -P httpd_unified 1</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo setsebool -P httpd_can_network_connect 1</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo setsebool -P httpd_can_network_connect_db 1</code>
+</pre>
+  </li>
+  <li>
+    <p>Give Apache ownership of all web server files:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo chown -R apache:apache /var/www/html</code></pre>
+  </li>
+  <li>
+    <p>On the host, navigate to <strong>127.0.0.1/DVWA</strong> in a web browser</p>
+  </li>
+  <li>
+    <p>On the <em>Server Check</em> screen, make sure the only variables in red are the same as the ones displayed in the screenshot (reCAPTCHA key, allow_url_fopen = On, and allow_url_include = On)</p>
+
+    <p><img src="/assets/images/DVWA-server-check-screen.png" alt="DVWA Server Check Screen" /></p>
+  </li>
+  <li>Click the <strong>Create / Reset Database</strong> button. When the page refreshes, it will take you to the DVWA login page</li>
+</ol>
+
+<p>At this point, the DVWA has been set up and is ready for use. However, I mentioned in the beginning that I wanted to customize it with a new theme and new logo.</p>
+
+<hr />
+
+<ol>
+  <li>On the VM, change directory: cd /var/www/html/DVWA/dvwa/images</li>
+  <li>Rename the login logos: 
+•	sudo mv login_logo.png login_logo.png.bak
+•	sudo mv logo.png logo.png.bak</li>
+  <li>On the host, open WinSCP and login to the VM</li>
+  <li>Copy the logo.png file from the host machine to the home directory of the VM</li>
+  <li>On the VM, you should still be in the /var/www/html/DVWA/dvwa/images directory</li>
+  <li>Move the logo.png file to the directory: sudo mv ~/logo.png ./</li>
+  <li>Copy the logo.png file as login_logo.png: sudo cp logo.png login_logo.png</li>
+  <li>Change directory: cd /var/www/html/DVWA/dvwa/includes</li>
+  <li>Change the display size of the logo.png image:
+•	Open a config file for editing: sudo nano dvwaPage.inc.php
+•	On line 302 (press alt+c to display line numbers), add width="150"  to the line so that it reads:
+&lt;img src="” . DVWA_WEB_PAGE_TO_ROOT . “dvwa/images/logo.png" alt="Damn Vulnerable Web Application\” width="150" /&gt;</li>
+  <li>Change directory: cd /var/www/html/DVWA</li>
+  <li>Change the display size of the login_logo.png image:
+•	Open a config file for editing: sudo nano login.php
+•	On line 83, add width="150"  to the line so that it reads:</li>
+</ol>
+<p>&lt;img src=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/images/login_logo.png\" width=\"300\" /&gt;</p>
+<ol>
+  <li>Open the CSS file for editing: sudo nano /var/www/DVWA/dvwa/css/main.css</li>
+  <li>Edit the color scheme as follows:
+•	Line 19: color: #ac2424;
+•	Line 121: background: #ac2424;
+•	Line 122: border-bottom: #2f1912;
+•	Line 171: background-color: #ac2424;
+•	Line 195: border-top: 5px solid #ac2424;</li>
+  <li>Use WinSCP from the host to copy the folder containing the ACME web files to the home directory of the VM</li>
+  <li>Copy the ACME web files to the Apache directory: sudo cp -R ~/ACME/* /var/www/html/</li>
+  <li>Change directory: cd /var/www/html/DVWA/dvwa/includes</li>
+  <li>Open a config file to change the button names: sudo nano dvwaPage.inc.php</li>
+  <li>Edit the button “names” according to the table below, modifying only the parts highlighted in the example.
+•	Note: The first button, Brute Force, is on Line 199
+Original line:
+$menuBlocks[ ‘vulnerabilities’ ][] = array( ‘id’ =&gt; ‘brute’, ‘name’ =&gt; ‘Brute Force’, ‘url’ =&gt; ‘vulnerabilities/brute/’ );
+Modified line:
+$menuBlocks[ ‘vulnerabilities’ ][] = array( ‘id’ =&gt; ‘brute’, ‘name’ =&gt; Admin Login’, ‘url’ =&gt; ‘vulnerabilities/brute/’ );</li>
+</ol>
+
+<p>Button Table
+Original	Modified
+Brute Force	Administrator Login
+Command Injection	Network Tool
+CSRF	
+File Inclusion	
+File Upload	
+Insecure CAPTCHA	
+SQL Injection	ACME Catalog
+SQL Injection (Blind)	—
+Weak Session IDs	
+XSS (DOM)	
+XSS (Reflected)	
+XSS (Stored)	
+CSP Bypass	
+Javascript	
+The Modified values in this table are only suggestions. You will need to come up with ideas for the rest.</p>
+<ol>
+  <li>If desired, type up the text for a replacement message of the DVWA homepage</li>
+  <li>Change directory: cd /var/www/html/DVWA</li>
+  <li>Make a backup copy of the index.php file: sudo cp index.php index.php.bak</li>
+  <li>On the host, use WinSCP to pull a copy of the index.php file to the host.</li>
+  <li>On the VM, delete the index.php file: sudo rm index.php</li>
+  <li>On the host, open the file in a text editor such as Notepad, Notepad+, or Visual Studio Code, then edit it with the replacement message, being careful to use the appropriate html tags and to not delete necessary portions.</li>
+  <li>Using WinSCP, copy the modified index.php file back to the /var/www/html/DVWA directory on the VM</li>
+  <li>Shutdown the VM: shutdown now</li>
+  <li>Take another snapshot, giving it a relevant name</li>
+  <li>Export and convert the VM for Hyper-V, using the directions here: https://kags.me.ke/post/virtualbox-to-hyper-v/</li>
+</ol>
+
+:ET

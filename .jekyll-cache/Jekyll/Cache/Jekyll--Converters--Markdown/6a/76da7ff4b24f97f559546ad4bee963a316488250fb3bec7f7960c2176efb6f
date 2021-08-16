@@ -1,6 +1,12 @@
-I"2<h2 id="here-are-some-of-the-projects-ive-worked-on">Here are some of the projects I’ve worked on</h2>
+I"�<h2 id="here-are-some-of-the-projects-ive-worked-on">Here are some of the projects I’ve worked on</h2>
 
 <ul>
+  
+    <li>
+      <h2><a href="/2021/08/14/LAMP-stack/">LAMP Stack with Customized DVWA</a></h2>
+      <p>Currently, I’m working for both Pacific Northwest National Laboratory and Marcraft, an Educational Technologies Group company. For both jobs recently, I had the opportunity to set up multiple web servers in Linux. For one of these projects I also set up a whole LAMP stack and the Damn Vulnerable Web Application (DVWA), but I wanted to customize it with a new look. I also wanted to have a fake front end website that has a link for “employees” to login with, which would take them to the DVWA login page.</p>
+
+    </li>
   
     <li>
       <h2><a href="/2021/06/14/network-vms-together/">Home Virtual Lab: Networking Virtual Machines Together on VirtualBox</a></h2>
