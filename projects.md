@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects
+title: Projects (Blog)
 nav_order: 2
 ---
 

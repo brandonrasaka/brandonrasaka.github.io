@@ -42,13 +42,13 @@ Alright, here we go!
 
     * Click **OK**, then click **OK** again
 
-    ![VM Network Configuration](/assets/images/vm-network-settings.png)
+    ![VM Network Configuration](/assets/images/dvwa/vm-network-settings.png)
 
 4.	Take a snapshot
     * With the VM highlighted, click the icon on the right side with 3 dots and horizontal lines, then click Snapshots
     * On the new screen, click **Take**, then give it a name such as _Fresh Install_, then any comments if you wish
 
-    ![VM Snaptshot](/assets/images/vm-snapshot.png)
+    ![VM Snaptshot](/assets/images/dvwa/vm-snapshot.png)
 
 5.	Start the VM and login with the following credentials:
     * User: centos
@@ -164,7 +164,7 @@ Alright, here we go!
 
 37.	On the _Server Check_ screen, make sure the only variables in red are the same as the ones displayed in the screenshot (reCAPTCHA key, allow_url_fopen = On, and allow_url_include = On)
 
-    ![DVWA Server Check Screen](/assets/images/DVWA-server-check-screen.png)
+    ![DVWA Server Check Screen](/assets/images/dvwa/DVWA-server-check-screen.png)
  
 38.	Click the **Create / Reset Database** button. When the page refreshes, it will take you to the DVWA login page
 

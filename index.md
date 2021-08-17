@@ -14,9 +14,9 @@ I made this website as a way to showcase some of the work I've done. What about 
 
 Here's what you'll find in each section of this site.
 
-## Projects
+## Projects (Blog)
 
-I've treated this section kinda like a blog. There's dates for each project, which are approximately when I completed them. That way, you can kinda get a sense of my progress. They're posted with the most recent projects on the top.
+This section is basically a blog about my cybersecurity passions and interests, but it's mostly describing projects I've worked on. There's dates for each project, which are approximately when I completed them. That way, you can kinda get a sense of my progress. They're posted with the most recent projects on the top.
 
 ## About
 

@@ -308,3 +308,19 @@ svg {
 .footer a {
   text-decoration: none;
 }
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.img-left {
+  float: left;
+  margin-right: 1em;
+}
+
+.img-right {
+  float: right;
+  margin-right: 1em;
+}
