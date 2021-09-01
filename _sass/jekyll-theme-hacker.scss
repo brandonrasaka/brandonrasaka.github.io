@@ -261,9 +261,9 @@ hr {
 }
 
 // Links
-   a:hover {
-     color:#999
-   }
+a:hover {
+  color:#999
+}
 
 a {
   color: #63c0f5;
@@ -323,4 +323,11 @@ svg {
 .img-right {
   float: right;
   margin-right: 1em;
+}
+
+#social {
+  display: inline-block;
+  font-size:30px;
+  padding: 10px;
+  color: white;
 }
