@@ -1,0 +1,64 @@
+I"�<p>Right now I have 3 jobs, plus I’m president of my school’s cybersecurity club (Cyberhawks). Needless to say, I have quite a bit on my plate, but it’s a ton of fun! Here are some of the things I’m currently working on:</p>
+
+<h2 id="applications-of-5g-technology">Applications of 5G Technology</h2>
+
+<p>As a tech student intern at Pacific Northwest National Laboratory (PNNL), I’m working on a couple of projects aimed at scientifically exploring applications of 5G technology.</p>
+
+<ul>
+  <li>ESXi server and virtual machines</li>
+  <li>Security Onion for log analysis</li>
+</ul>
+
+<h2 id="cybersecurity-testbed-environment">Cybersecurity Testbed Environment</h2>
+
+<p>Another PNNL project I’m involved with his developing a nuclear power plant testbed environment for cybersecurity awareness training.</p>
+
+<ul>
+  <li>OpenStack</li>
+  <li>Security Onion</li>
+  <li>Windows Domain Controller</li>
+  <li>Apache web servers</li>
+</ul>
+
+<h2 id="industrial-control-systems-cybersecurity-lab-book">Industrial Control Systems Cybersecurity Lab Book</h2>
+
+<p><a href="https://www.marcraft.com/">Marcraft Educational Technologies Group (ETG)</a> is in the business of producing educational material to sell to colleges and universities. In particular, Marcraft develops technical courses, such as <em>Intro to Computers</em> and <em>Intro to Networking</em>. They also write courses designed to help students prepare for certification exams like the CompTIA A+ and Network+.</p>
+
+<p>My role at Marcraft started out as a reviewer and tester of a book currently in development on the cybersecurity of ICS. That includes installing and configuring the operating systems and software for the entire lab setup, with components such as:</p>
+
+<ul>
+  <li>WAMP and LAMP stacks</li>
+  <li>multiple networks with routers and switches</li>
+  <li>Raspberry Pi with DNS and DHCP configured to simulate an ISP</li>
+  <li>PLCs programmed with Ladder Logic</li>
+</ul>
+
+<p>After the initial set-up, I have been working through all the labs that were already written to ensure they are written accurately. I have also modified and written several additional labs, and integrated the Damn Vulnerable Web Application with a customized front-end for multiple labs and courses.</p>
+
+<h2 id="canvas-shell-design-for-college-course">Canvas Shell Design for College Course</h2>
+
+<p>Canvas is a widely-used Learning Management System (LMS) that is used by Columbia Basin College for submitting and grading assignments, quizzes, exams, and discussion forums. Making use of my MS in Geology, I teach Geology 101 at the same school I’m attending for cybersecurity. In response to COVID-19 and the lockdowns, I adapted my course for an online curriculum.</p>
+
+<h2 id="canvas-shell-design-for-college-club">Canvas Shell Design for College Club</h2>
+
+<h2 id="college-club-charter-draft">College Club Charter Draft</h2>
+
+<!--
+## _Tech Student Intern_, Pacific Northwest National Laboratory
+
+* Applications of 5G Technology
+* Nuclear Power Plant Testbed Environment for Cybersecurity Awareness Training
+
+## _Author and Technical Specialist_, Marcraft ETG
+
+* Industrial Control Systems Cybersecurity Lab Book
+
+## _Geology 101 Instructor (online)_, Columbia Basin College
+
+* Canvas course design
+
+## _President_, Cyberhawks
+
+* Canvas 
+-->
+:ET

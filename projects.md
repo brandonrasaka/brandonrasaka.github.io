@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Projects (Blog)
-nav_order: 2
+title: Projects
+nav_order: 3
 ---
 
 ## Here are some of the projects I've worked on

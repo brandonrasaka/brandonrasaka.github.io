@@ -1,0 +1,10 @@
+I"d<h1 id="hello-there">Hello there!</h1>
+
+<p><img src="/assets/images/self-portrait.jpg" alt="Hello there!" /></p>
+
+<blockquote>
+  <p>Cyber security student, father of six, outdoorsman, and sci-fi/fantasy nerd</p>
+</blockquote>
+
+<pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> ./brandon.sh | geologyMS | cyberSec &gt; README.md</code></pre>
+:ET
