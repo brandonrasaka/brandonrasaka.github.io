@@ -127,4 +127,22 @@ Okay, so now you've got navigation pages, it's time to start blogging. Now, I do
 
     The layout and title variables are the same as before, but now there's a new one: permalink. This tells the site what the URL for this page (after the domain name) should be, which you can verify by checking the URL in your browser right now.
 
+    ![URL example](/assets/images/github-pages/url-example.png)
+
 1. Just like with the navigation pages, here's where you can enter your post's content.
+
+## Final Thoughts
+
+That's the basics! I hope this is a helpful tutorial for anyone looking to make and host a free website on GitHub! If you are using the Hacker theme, I've added a couple additional elements to my `theme.md` page beyond what the theme originally has. They are listed below.
+
+Have fun!
+
+## Additional Hacker Theme Elements
+
+To see the syntax for these, feel free to download my version of `theme.md` from my [GitHub](https://github.com/brandonrasaka/brandonrasaka.github.io/blob/master/theme.md).
+
+Use HTML and CSS to make a Linux-style Terminal box
+
+<pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> cat /etc/passwd</code></pre>
+
+`{{ "{% Liquid tags within a Jekyll post " }}%}`
