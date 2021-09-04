@@ -131,6 +131,37 @@ Okay, so now you've got navigation pages, it's time to start blogging. Now, I do
 
 1. Just like with the navigation pages, here's where you can enter your post's content.
 
+## Add Social Icons
+
+I have social media icons in my footer that are links to my profiles on the respective sites. I use Font Awesome for these icons, which is a collections of icons, many versions of which are free. Generally, to use Font Awesome icons, you would include a certain CSS tag within the `<head>` tag of your HTML, then you would link to the icon you want within the body. With Jekyll, you do the same but instead you're going to add it to your layout. Because you're using Markdown for all your pages.
+
+1. Open the `_layouts/default.html` page.
+
+1. Within the `<head>` tag, add the following:
+
+    ```html
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    ```
+
+1. To get yours like mine, open the `_includes/footer.html` page (if the theme doesn't come with a footer page, then create one)
+
+1. Add the following, but changing the URLs to match your own profiles and email address:
+
+    ```html
+    <p>
+        <a id="social" href="mailto:brandonrasaka@protonmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i></a>
+        <a id="social" href="https://www.linkedin.com/in/brandonrasaka/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square"></i></a>
+        <a id="social" href="https://github.com/brandonrasaka/" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+        <a id="social" href="https://www.youtube.com/c/BrandonRasaka" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+    </p>
+    ```
+
+    This will add icons for email, LinkedIn, GitHub, and YouTube. Plus, each icon is a link to my profile on each site. You might want to add others, so here's a [list of Font Awesome icons and their names](https://aksakalli.github.io/jekyll-doc-theme/docs/font-awesome/). To use one, just make sure the name listed follows the `fa-` in the `<i>` tag. For example, if I wanted to use the Reddit icon (<i class="fa fa-reddit-alien"></i>), I would type:
+
+    ```html
+    <i class="fa fa-reddit-alien"></i>
+    ```
+
 ## Final Thoughts
 
 That's the basics! I hope this is a helpful tutorial for anyone looking to make and host a free website on GitHub! If you are using the Hacker theme, I've added a couple additional elements to my `theme.md` page beyond what the theme originally has. They are listed below.
