@@ -60,6 +60,8 @@ I could keep going, but I won't. Instead, I'll invite you to my YouTube channel,
 
 ## Artistic Endeavors
 
+![Guitar](/assets/images/guitar.jpg){: .img-left width="400"}
+
 I play the guitar and sing for fun, and I love jamming out to classic rock music. I'm far from an expert, but I think I'm not too bad. I only have a Fender acoustic now, but I used to have an electric guitar as well. I'm a decent visual artist too. I used to draw _a ton_ when I was younger and I still more-or-less have the talent. These days though, if I'm doing any kind of visual art, I'm usually doing graphic design on Adobe Illustrator.
 
 I'm also into writing. I currently have three different stories in the works, though who knows when I'll ever get around to finishing them. One is a murder mystery set in a fictional ancient era in which the lead investigator discovers a plot to overthrow the government. Another is a serial killer thriller novel set in modern times. And the other is an epic fantasy with dragons and magic.

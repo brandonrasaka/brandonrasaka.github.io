@@ -24,6 +24,8 @@ Another PNNL project I'm involved with his developing a nuclear power plant test
 
 ## Industrial Control Systems Cybersecurity Lab Book
 
+![Marcraft Lab](/assets/images/work-progress/marcraft-lab.jpg)
+
 [Marcraft Educational Technologies Group (ETG)](https://www.marcraft.com/) is in the business of producing educational material to sell to colleges and universities. In particular, Marcraft develops technical courses, such as _Intro to Computers_ and _Intro to Networking_. They also write courses designed to help students prepare for certification exams like the CompTIA A+ and Network+.
 
 My role at Marcraft started out as a reviewer and tester of a book currently in development on the cybersecurity of ICS. That includes installing and configuring the operating systems and software for the entire lab setup, with components such as:
@@ -37,33 +39,18 @@ After the initial set-up, I have been working through all the labs that were alr
 
 ## Canvas Shell Design for College Course
 
-![Geology 101 Canvas Activities](/assets/images/canvas-geology-activities.png){: .img-left width="600"}
+![Geology 101 Canvas Activities](/assets/images/work-progress/canvas-geology-activities.png){: .img-left width="600"}
 
 Canvas is a widely-used Learning Management System (LMS) that is used by Columbia Basin College for submitting and grading assignments, quizzes, exams, and discussion forums. Making use of my MS in Geology, I teach Geology 101 at the same school I'm attending for cybersecurity. In response to COVID-19 and the lockdowns, I adapted my course for an online curriculum. I recorded lesson videos, wrote quizzes and exams, and adapted lab assignments in a way that would work well for students taking the course online. Even when the pandemic ends and classes can resume as normal, my Geology 101 course will continue to be a class that remote students can take and have a good experience with.
 
 ## Canvas Shell Design for College Club
 
-![Cyberhawks Home Page](/assets/images/cyberhawks-homepage.gif){: .center-image}
+![Cyberhawks Home Page](/assets/images/work-progress/cyberhawks-homepage.gif){: .center-image}
 
 Clubs can also use Canvas for administration, and recently this has become a new requirement for all clubs at CBC. As president, I have been overseeing and directing the planning and implementation of creating a user-friendly Canvas experience for new and returning club members alike. Since the courses at CBC are primarily aimed at teaching conceptual knowledge, my goal as the Cyberhaws president is to provide the best opportunities for applied learning. Our Canvas shell will have myriad resources and challenges for members to extend themselves outside of the classroom and challenge themselves.
 
 ## College Club Charter Draft
 
-<!--
-## _Tech Student Intern_, Pacific Northwest National Laboratory
+Another work in progress for me as Cyberhawks president is drafting a club charter. If the club ever had a charter before, it's nowhere to be found. Since I obviously won't be president forever, I want to set the club and its leaders up for success now and in the future. So I have been working hard at writing a charter that outlines the club's mission and the policies and procedures for administration.
 
-* Applications of 5G Technology
-* Nuclear Power Plant Testbed Environment for Cybersecurity Awareness Training
-
-## _Author and Technical Specialist_, Marcraft ETG
-
-* Industrial Control Systems Cybersecurity Lab Book
-
-## _Geology 101 Instructor (online)_, Columbia Basin College
-
-* Canvas course design
-
-## _President_, Cyberhawks
-
-* Canvas 
--->
+![Cyberhawks Charter](/assets/images/work-progress/cyberhawks-charter.png)
