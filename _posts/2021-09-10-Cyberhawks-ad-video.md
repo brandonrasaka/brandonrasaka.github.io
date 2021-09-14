@@ -2,7 +2,7 @@
 layout: post
 title: "New Video Invitation for the Cyberhawks Club"
 permalink: /:categories/:year/:month/:day/:title/
-youtubeId: 65URhuY8sqU
+youtubeId: 81Tfh9H8QuA
 ---
 
 As president of my school's cybersecurity club, the Cyberhawks, I wanted to produce a video that we could use to advertise the club. I made one last year that was selfie-style and pretty cheesy. This year I wanted it to be much more professional. At first I was thinking of recording different club members doing cool things, but the script kept coming out really bad and I just had a bad feeling about the whole idea. Plus, COVID makes it not such a good idea to get together unnecessarily right now.
