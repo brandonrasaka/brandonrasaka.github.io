@@ -2,13 +2,18 @@
 layout: default
 title: Works In Progress
 nav_order: 4
+youtubeId: 6dsgMq2bzl0
 ---
 
 Right now I have 3 jobs, plus I'm president of my school's cybersecurity club (Cyberhawks). Needless to say, I have quite a bit on my plate, but it's a ton of fun! Here are some of the things I'm currently working on:
 
 ## Applications of 5G Technology
 
-As a tech student intern at [Pacific Northwest National Laboratory (PNNL)](https://www.pnnl.gov/), I'm working on projects aimed at scientifically exploring applications of [5G technology](https://www.pnnl.gov/pnnl-5g-innovation-studio).
+As a tech student intern at [Pacific Northwest National Laboratory (PNNL)](https://www.pnnl.gov/), I'm working on projects aimed at scientifically exploring applications of [5G technology](https://www.pnnl.gov/pnnl-5g-innovation-studio). Here's a look at PNNL's 5G Studio:
+
+{% include youtubePlayer.html id=page.youtubeId %}
+
+What I've worked on:
 
 * ESXi server and virtual machines
 * Security Onion
@@ -16,6 +21,8 @@ As a tech student intern at [Pacific Northwest National Laboratory (PNNL)](https
 ## Cybersecurity Testbed Environment
 
 Another PNNL project I'm involved with his developing a nuclear power plant testbed environment for [cybersecurity awareness training](https://nuclearenergy.pnnl.gov/cybersecurity.stm).
+
+What I've worked on:
 
 * OpenStack
 * Security Onion
