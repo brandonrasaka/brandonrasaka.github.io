@@ -1,0 +1,56 @@
+I"f<p>I have a personal project writing a work of fiction and I recently decided to update how I keep my notes. I used to just use Google Keep Notes because I could easily write down ideas on my phone. But it makes for terrible review of my notes when I’m actually writing the story and building the fictional world. I wanted something with better organization, but also something I could share with my writing group, and <em>only</em> my writing group. I don’t want to share it with the rest of the world until it is ready for publication.</p>
+
+<p>So I decided to use the <a href="https://github.com/rundocs/jekyll-rtd-theme">jekyll-rtd-theme</a> to create a documentation website, then host it on a local web server, then set up a VPN connection so my writing group can view it.</p>
+
+<h2 id="the-website">The Website</h2>
+
+<h3 id="template-modifications">Template Modifications</h3>
+
+<h3 id="hosting-locally">Hosting Locally</h3>
+
+<h2 id="the-vpn">The VPN</h2>
+
+<p>I followed the instructions on Digital Ocean for this and I don’t think I can write better instructions than they. However, for the sake of demonstrating what I did and how my instance differed from their instructions, I will outline the main points of what I did.</p>
+
+<h3 id="certificate-authority">Certificate Authority</h3>
+
+<ul>
+  <li>
+    <p>Install Easy-RSA on dedicated machine</p>
+  </li>
+  <li>
+    <p>Set up PKI</p>
+  </li>
+  <li>
+    <p>Create CA</p>
+  </li>
+</ul>
+
+<p>(<em>From</em> <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-ubuntu-20-04"><em>Digital Ocean: How To Set Up and Configure a Certificate Authority (CA) On Ubuntu 20.04</em></a>)</p>
+
+<h3 id="openvpn">OpenVPN</h3>
+
+<ul>
+  <li>
+    <p>Install Easy-RSA on machine to host the OpenVPN server</p>
+  </li>
+  <li>
+    <p>Create PKI</p>
+  </li>
+  <li>
+    <p>Request server certificate and private key from CA</p>
+  </li>
+  <li>
+    <p>Sign request</p>
+  </li>
+  <li>
+    <p>Set up TLS obfuscation</p>
+  </li>
+  <li>
+    <p>Generate OpenVPN client certificate key pair</p>
+  </li>
+  <li>
+    <p>Configure OpenVPN server</p>
+  </li>
+</ul>
+:ET
