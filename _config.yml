@@ -5,3 +5,5 @@ theme: jekyll-theme-hacker
 name: Brandon_Rasaka
 highlighter: rouge
 linenos: true
+collections:
+  - collection
