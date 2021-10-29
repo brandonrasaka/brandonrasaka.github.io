@@ -57,37 +57,17 @@ First of all, don’t spend too much time on any one challenge. Try it, spend a 
 
     Use Hashcat or John the Ripper in Kali Linux. My favorite is Hashcat. Be aware, this will take some time depending on your system’s resources. Also be aware that your system can potentially overheat, again depending on your resources. It has never happened to me on an NCL challenge, even running on a VM on my laptop, but it is a possibility. Here’s how I use Hashcat:
 
-       * Create a new text file called to-crack.txt and copy/paste the hashes, one per line.
+    * Create a new text file called to-crack.txt and copy/paste the hashes, one per line.
 
-       * Kali comes with the rockyou list, but it is zipped by default, so if you haven’t unzipped it yet, run this command:
+    * Kali comes with the rockyou list, but it is zipped by default, so if you haven’t unzipped it yet, run this command:
        
         <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo gzip -d /usr/share/wordlists/rockyou.txt.gz</code></pre>
 
-       * With the rockyou list unpackaged, you can run Hashcat:
+    * With the rockyou list unpackaged, you can run Hashcat:
         
            <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt</code></pre>
 
-           * Here’s the explanation:
-
-            ```
-            hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
-            
-            [-----] [---] [----] [----------] [------------------------------] [------------]
-            
-               |      |    |          |                       |                      |
-            
-               |      |    |          |                       |                      +---------> output file option and name (will be created if it doesn't already exist)
-            
-               |      |    |          |                       +--------------------------------> wordlist path
-            
-               |      |    |          +--------------------------------------------------------> file containing hashes
-            
-               |      |    +-------------------------------------------------------------------> Hash Type = MD5
-            
-               |      +------------------------------------------------------------------------> Attack Mode = Straight (Dictionary)
-            
-               +-------------------------------------------------------------------------------> Call the Hascat program
-            ```
+        * Here’s the explanation:
  
 * Cracking passwords with a custom wordlist:
 
