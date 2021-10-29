@@ -16,6 +16,8 @@ First of all, don’t spend too much time on any one challenge. Try it, spend a 
 
 # Cryptography
 
+* [dCode Cipher Recognizer](https://www.dcode.fr/identification-chiffrement): This website is in French, but Chrome (and I think Firefox) have the ability to translate it for you. This link specifically takes you to the Cipher Recognizer which will help you narrow down what cipher was used. It's not always accurate, but a great help! It also has LOTS of other cipher tools, many of which have a brute force option. This site also has several pictograph ciphers, but using a reverse image search will help you determine which one to use.
+
 * [Rumkin](http://rumkin.com/tools/cipher/): This has a big list of common ciphers. Sometimes you just have to guess and check several different ones until you get familiar with them. NCL typically uses the following:
     * Atbash
     
@@ -31,69 +33,67 @@ First of all, don’t spend too much time on any one challenge. Try it, spend a 
 
 * [CryptoCorner Frequency Analysis](https://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html): This is just one of many tools that CryptoCorner has. It lets you input the ciphered message, and then test different substitutions. It also tells you the most common letters and letter patterns in the English language, then compares them with the most common ciphered letters and patterns.
 
-* [dCode](https://www.dcode.fr/): This website is in French, but Chrome (and I think Firefox) have the ability to translate it for you. It has LOTS of cipher tools, many of which have a brute force option.
-
-* [RapidTables](https://www.dcode.fr/): This tool translates different number systems between each other, such as ASCII, hexadecimal, binary, and Base64. Don’t forget the links listed along the right side that are also very helpful!
+* [RapidTables](https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html): This tool translates different number systems between each other, such as ASCII, hexadecimal, binary, and Base64. Don’t forget the links listed along the right side that are also very helpful!
 
 # Password Cracking
 
-* Generating hashes
+## Generating hashes
 
-    * [Online tool](https://www.md5hashgenerator.com/): This is one of many tools online that can generate hashes. This one specifically generates MD5 and SHA1 hash values.
+* [Online tool](https://www.md5hashgenerator.com/): This is one of many tools online that can generate hashes. This one specifically generates MD5 and SHA1 hash values.
 
-    * I recommend learning as much Linux as possible, therefore you can use the terminal in Ubuntu or Kali:
+* I recommend learning as much Linux as possible, therefore you can use the terminal in Ubuntu or Kali:
 
-        * `echo -n [string] | md5sum`
+    * `echo -n [string] | md5sum`
 
-        * `echo -n [string] | sha1sum`
+    * `echo -n [string] | sha1sum`
 
-        * `echo -n [string] | sha256sum`
+    * `echo -n [string] | sha256sum`
 
-* Cracking easy passwords
+## Cracking easy passwords
 
-    The quickest method for the “Easy” challenges is to copy and paste the hash into an online tool such as CrackStation.
+The quickest method for the “Easy” challenges is to copy and paste the hash into an online tool such as CrackStation.
 
-* Cracking passwords with the rockyou list
+## Cracking passwords with the rockyou list
 
-    Use Hashcat or John the Ripper in Kali Linux. My favorite is Hashcat. Be aware, this will take some time depending on your system’s resources. Also be aware that your system can potentially overheat, again depending on your resources. It has never happened to me on an NCL challenge, even running on a VM on my laptop, but it is a possibility. Here’s how I use Hashcat:
+Use Hashcat or John the Ripper in Kali Linux. My favorite is Hashcat. Be aware, this will take some time depending on your system’s resources. Also be aware that your system can potentially overheat, again depending on your resources. It has never happened to me on an NCL challenge, even running on a VM on my laptop, but it is a possibility. Here’s how I use Hashcat:
 
-    * Create a new text file called to-crack.txt and copy/paste the hashes, one per line.
+* Create a new text file called to-crack.txt and copy/paste the hashes, one per line.
 
-    * Kali comes with the rockyou list, but it is zipped by default, so if you haven’t unzipped it yet, run this command:
+* Kali comes with the rockyou list, but it is zipped by default, so if you haven’t unzipped it yet, run this command:
        
-        <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo gzip -d /usr/share/wordlists/rockyou.txt.gz</code></pre>
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo gzip -d /usr/share/wordlists/rockyou.txt.gz</code></pre>
 
-    * With the rockyou list unpackaged, you can run Hashcat:
+* With the rockyou list unpackaged, you can run Hashcat:
         
-        <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt</code></pre>
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt</code></pre>
 
-        * Here’s the explanation:
+    * Here’s the explanation:
 
-        ![Hashcat Explanation](/assets/images/hashcat-explanation.png)
+    ![Hashcat Explanation](/assets/images/hashcat-explanation.png)
  
-* Cracking passwords with a custom wordlist:
+## Cracking passwords with a custom wordlist:
 
-    NCL usually has a challenge that says something like "It appears that the passwords are all in the format: "SKY-BMYS-" followed by 4 digits. Can you crack them?" For this, you have to create your own custom wordlist. There are various tools, like Crunch, that will do this but require some learning to get what you actually want. I just use Excel, here’s how:
+NCL usually has a challenge that says something like "It appears that the passwords are all in the format: "SKY-BMYS-" followed by 4 digits. Can you crack them?" For this, you have to create your own custom wordlist. There are various tools, like Crunch, that will do this but require some learning to get what you actually want. I just use Excel, here’s how:
 
-    * Open Excel and enter **0** into cell _A1_
+* Open Excel and enter **0** into cell _A1_
 
-    * Highlight A1, then from the _Ribbon_ > _Home_ tab > _Editing_ section, select **Fill** > **Series**
+* Highlight A1, then from the _Ribbon_ > _Home_ tab > _Editing_ section, select **Fill** > **Series**
 
-    * Select _Series in_ **Columns**, _Type_ **Linear**, _Step Value:_ **1**, _Stop Value:_ **9999**, then click **OK**
+* Select _Series in_ **Columns**, _Type_ **Linear**, _Step Value:_ **1**, _Stop Value:_ **9999**, then click **OK**
 
-    * In cell B1, enter the following: `=CONCATENATE("SKY-BMYS-",TEXT(A1,"0000"))`
+* In cell B1, enter the following: `=CONCATENATE("SKY-BMYS-",TEXT(A1,"0000"))`
 
-        * Make sure the letters between the dashes match whatever the actual challenge is.
+    * Make sure the letters between the dashes match whatever the actual challenge is.
 
-    * Double-click the Fill Handle in the bottom-right corner of cell B1 to auto fill the function all the way down.
+* Double-click the Fill Handle in the bottom-right corner of cell B1 to auto fill the function all the way down.
 
-    * Copy the whole list of values and paste them into Notepad, then save the file as something meaningful, like `sky.txt`
+* Copy the whole list of values and paste them into Notepad, then save the file as something meaningful, like `sky.txt`
 
-    * Transfer the file to Kali (how you do this will depend on how you’re using Kali. If you’re using a Kali VM in VirtualBox, you can use the VirtualBox File Manager)
+* Transfer the file to Kali (how you do this will depend on how you’re using Kali. If you’re using a Kali VM in VirtualBox, you can use the VirtualBox File Manager)
 
-    * This step might not be necessary, but as a precaution it’s a good idea to make sure a text file created in Windows will be properly read in Linux, so assuming you’re current working directory is the one with the sky.txt file, enter this command into the terminal: `dos2linux sky.txt`
+* This step might not be necessary, but as a precaution it’s a good idea to make sure a text file created in Windows will be properly read in Linux, so assuming you’re current working directory is the one with the sky.txt file, enter this command into the terminal: `dos2linux sky.txt`
 
-    * Now run Hashcat just like above but change the file with hashes (making sure to create such a file with the relevant hashes) and the wordlist. You might also want to change the name of the output file, but you don’t have to.
+* Now run Hashcat just like above but change the file with hashes (making sure to create such a file with the relevant hashes) and the wordlist. You might also want to change the name of the output file, but you don’t have to.
 
 # Log Analysis
 
