@@ -65,9 +65,21 @@ First of all, don’t spend too much time on any one challenge. Try it, spend a 
 
     * With the rockyou list unpackaged, you can run Hashcat:
         
-           <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt</code></pre>
+        <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt</code></pre>
 
         * Here’s the explanation:
+
+        ```
+            hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
+            [-----] [---] [----] [----------] [------------------------------] [------------]
+               |      |    |          |                       |                      |
+               |      |    |          |                       |                      +---------> output file option and name (will be created if it doesn't already exist)
+               |      |    |          |                       +--------------------------------> wordlist path
+               |      |    |          +--------------------------------------------------------> file containing hashes
+               |      |    +-------------------------------------------------------------------> Hash Type = MD5
+               |      +------------------------------------------------------------------------> Attack Mode = Straight (Dictionary)
+               +-------------------------------------------------------------------------------> Call the Hascat program
+            ```
  
 * Cracking passwords with a custom wordlist:
 
