@@ -6,23 +6,26 @@ nav_order: 2
 
 ![Peace!](/assets/images/peace.jpg){: .img-left width="350"}
 
-I'm a current student at Columbia Basin College, all set to graduate in December 2021 with my BAS in Cyber Security. My goal after I graduate is to work as a cybersecurity engineer or a cybersecurity researcher. However, I'm also open to working in anything related to cybersecurity or computers, such as networking, information technology, databases, etc.
+~~I'm a current student at Columbia Basin College, all set to graduate~~ I just graduated in December 2021 with my BAS in Cyber Security. My goal ~~after I graduate~~ now that I am done with school is to work in Cybersecurity Risk Analysis/Assessment/Management or in Penetration Testing. However, I'm also open to working in anything related to cybersecurity or computers, such as networking, information technology, databases, etc.
+
+I've figured out that I really like data analysis, problem-solving, and math. I've also learned throughout my education and my experience in these last couple years that I really enjoy tinkering and developing automated systems.
 
 I made this website as a way to showcase some of the work I've done. Isn't that what a resume for? Of course, I have a resume, but I've worked very hard to keep it clean, limited, and tailored to each job application. This site doesn't outline my employment history, but is a way to document some of my cybersecurity adventures. You should also definitely check out [my LinkedIn profile](https://www.linkedin.com/in/brandonrasaka/) to read about my other achievements and my work history, but this website gives me the ability to present myself with a little more of a casual voice. When you read my website, I want you to get to know the _real me_.
 
 # Me, at a glance
 
-Though I'm currently getting my BAS in cybersecurity, this isn't my first rodeo through school. I started by getting a bachelor's in Geology at Brigham Young University - Idaho, then I went on to get my master's in Geology from Baylor University. I spent a few years teaching an online natural disasters course, submitting countless resumes for positions in a failing field, and working at a rental car agency. Eventually, I decided it was time to gain some education and skills in a different arena.
+Though I just got my BAS in cybersecurity, this isn't my first rodeo through school. I started by getting a bachelor's in Geology at Brigham Young University - Idaho, then I went on to get my master's in Geology from Baylor University. I spent a few years teaching an online natural disasters course, submitting countless resumes for positions in a failing field, and working at a rental car agency. Eventually, I decided it was time to gain some education and skills in a different arena.
 
-Now, I'm in an internship at Pacific Northwest National Laboratory through the SULI program. I also work for Marcraft/ETG, a company that develops training courses with hands-on equipment. They sell to educators, not to students, so they're often selling an entire course, which comes with a textbook, lab book, and a whole kit of devices, like a pre-configured Raspberry Pi, a laptop with Kali and Windows, several routers, a server, etc. At Marcraft I am editing and writing labs for their course in Industrial Control System Cyber Security. Unfortunately, my work at Marcraft will be put on hold during my internship with PNNL.
+Now, I'm an intern at Pacific Northwest National Laboratory, which started through the SULI program in the summer of 2021. During part of that time I also work for Marcraft/ETG, a company that develops training courses with hands-on equipment. They sell to educators, not to students, so they're often selling an entire course, which comes with a textbook, lab book, and a whole kit of devices, like a pre-configured Raspberry Pi, a laptop with Kali and Windows, several routers, a server, etc. At Marcraft I am editing and writing labs for their course in Industrial Control System Cyber Security.
 
-I'm a very busy man right now! In addition to these jobs, I also work for CBC as an adjunct instructor teaching Geology 101 online. I'm also the president of our campus cybersecurity club: the Cyberhawks. I'm a husband, and the proud father of six kids!
+In addition to these jobs, I also work for CBC as an adjunct instructor teaching Geology 101 online, and until I graduated I was also the president of our campus cybersecurity club: the Cyberhawks. I'm a husband, and the proud father of six kids!
 
 ![Me and my family having fun together](/assets/images/family-tree.jpg)
 
 # My Path to Cybersecurity
 
 Is it "cyber security" (two words) or "cybersecurity" (one word)?
+
 Most people probably couldn't care less, but pride myself on precise language. I went back and forth a lot, then I decided to settle on "cybersecurity" (one word), because that's the way it's use by NIST.
 
 So, how does someone with a master's in geology and six kids decide to go _back_ to school and get a degree in cybersecurity? Well, the short version of the story is this. After graduating with my MS degree, I spent 2.5 years applying for hundreds of positions related to geology. Geologist, staff geologist, assistant geologist, environmental planner, geographic information systems specialist, geology instructor (community college), etc.

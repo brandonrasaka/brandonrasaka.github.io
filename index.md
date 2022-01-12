@@ -8,7 +8,7 @@ nav_order: 1
 
 ![Hello there!](/assets/images/self-portrait.jpg)
 
-Cyber security student, father of six, outdoorsman, and sci-fi/fantasy nerd
+Cyber security student, father of six, outdoorsman, tinkerer, and sci-fi/fantasy nerd.
 
 This is me.
 
