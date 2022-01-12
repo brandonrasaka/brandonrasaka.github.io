@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Works In Progress
+title: Works In Progress (and other work)
 nav_order: 4
 youtubeId: 6dsgMq2bzl0
 ---
 
-Right now I have 3 jobs, plus I'm president of my school's cybersecurity club (Cyberhawks). Needless to say, I have quite a bit on my plate, but it's a ton of fun! Here are some of the things I'm currently working on:
+Here are some of the things I'm currently working on:
 
 ## Applications of 5G Technology
 
@@ -13,21 +13,24 @@ As a tech student intern at [Pacific Northwest National Laboratory (PNNL)](https
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
-What I've worked on:
+What I've been working on:
 
 * ESXi server and virtual machines
-* Security Onion
+* Kubernetes and Docker
 
 ## Cybersecurity Testbed Environment
 
 Another PNNL project I'm involved with his developing a nuclear power plant testbed environment for [cybersecurity awareness training](https://nuclearenergy.pnnl.gov/cybersecurity.stm).
 
-What I've worked on:
+What I've been working on:
 
-* OpenStack
-* Security Onion
-* Windows Domain Controller
+* OpenStack VMs
 * Apache web servers
+* PowerShell and Python to simulate NPCs
+
+# Other work
+
+These are a few other projects I was involved in recently:
 
 ## Industrial Control Systems Cybersecurity Lab Book
 
@@ -41,6 +44,7 @@ My role at Marcraft started out as a reviewer and tester of a book currently in 
 * multiple networks with routers and switches
 * Raspberry Pi with DNS and DHCP configured to simulate an ISP
 * PLCs programmed with Ladder Logic
+* Damn Vulnerable Web Application
 
 After the initial set-up, I have been working through all the labs that were already written to ensure they are written accurately. I have also modified and written several additional labs, and integrated the Damn Vulnerable Web Application with a customized front-end for multiple labs and courses.
 
@@ -54,10 +58,10 @@ Canvas is a widely-used Learning Management System (LMS) that is used by Columbi
 
 ![Cyberhawks Home Page](/assets/images/work-progress/cyberhawks-homepage.gif){: .center-image}
 
-Clubs can also use Canvas for administration, and recently this has become a new requirement for all clubs at CBC. As president, I have been overseeing and directing the planning and implementation of creating a user-friendly Canvas experience for new and returning club members alike. Since the courses at CBC are primarily aimed at teaching conceptual knowledge, my goal as the Cyberhaws president is to provide the best opportunities for applied learning. Our Canvas shell will have myriad resources and challenges for members to extend themselves outside of the classroom and challenge themselves.
+Clubs can also use Canvas for administration, and recently this has become a new requirement for all clubs at CBC. As president, I oversaw and directed the planning and implementation of creating a user-friendly Canvas experience for new and returning club members alike. Since the courses at CBC are primarily aimed at teaching conceptual knowledge, my goal as the Cyberhaws president was to provide the best opportunities for applied learning.
 
 ## College Club Charter Draft
 
-Another work in progress for me as Cyberhawks president is drafting a club charter. If the club ever had a charter before, it's nowhere to be found. Since I obviously won't be president forever, I want to set the club and its leaders up for success now and in the future. So I have been working hard at writing a charter that outlines the club's mission and the policies and procedures for administration.
+Another work in progress for me as Cyberhawks president was drafting a club charter. If the club ever had a charter before, it's nowhere to be found. Since I obviously wasn't going to be president forever, I wanted to set the club and its leaders up for success now and in the future. So I worked hard to write a charter that outlines the club's mission and the policies and procedures for administration.
 
 ![Cyberhawks Charter](/assets/images/work-progress/cyberhawks-charter.png)
