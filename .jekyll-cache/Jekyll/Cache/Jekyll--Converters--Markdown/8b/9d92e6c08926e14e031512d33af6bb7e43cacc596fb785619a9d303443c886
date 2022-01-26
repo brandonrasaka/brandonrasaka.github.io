@@ -1,6 +1,18 @@
-I"Œ<h2 id="here-are-some-of-the-projects-ive-worked-on">Here are some of the projects Iâ€™ve worked on</h2>
+I"€<h2 id="here-are-some-of-the-projects-ive-worked-on">Here are some of the projects Iâ€™ve worked on</h2>
 
 <ul>
+  
+    <li>
+      <h2><a href="/2022/01/13/kubernetes/">Kubernetes on Ubuntu 20.04</a></h2>
+      <p>Iâ€™m using this space as a place to take notes and document my progress on learning about Kubernetes. I have very little knowledge of containerization, so I wanted to dive in and see what I can learn. I have an ESXi server in my home that I will be using to host my VMs to install Kubernetes.</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2021/10/29/NCL-Basic-Tips/">NCL Basic Tips</a></h2>
+      <p>The National Cyber League (NCL) is a fun (mostly) Jeopardy style capture the flag (CTF) competition that has two seasons every year: the Spring Season and the Fall Season. NCL is only for college students and is a <em>great</em> learning opportunity. At the time of this writing, I am in my last few weeks of school getting my BAS in Cybersecurity, so this Fall Season is my last time playing. I wrote this post as a way to give newer players some basic tips to help springboard your learning.</p>
+
+    </li>
   
     <li>
       <h2><a href="/2021/09/26/OpenVPN-to-web-server/">OpenVPN Connection to Private Web Server</a></h2>

@@ -1,4 +1,4 @@
-I"�<p>Right now I have 3 jobs, plus I’m president of my school’s cybersecurity club (Cyberhawks). Needless to say, I have quite a bit on my plate, but it’s a ton of fun! Here are some of the things I’m currently working on:</p>
+I"J<p>Here are some of the things I’m currently working on:</p>
 
 <h2 id="applications-of-5g-technology">Applications of 5G Technology</h2>
 
@@ -9,25 +9,28 @@
     </iframe>
   </div>
 
-<p>What I’ve worked on:</p>
+<p>What I’ve been working on:</p>
 
 <ul>
   <li>ESXi server and virtual machines</li>
-  <li>Security Onion</li>
+  <li>Kubernetes and Docker</li>
 </ul>
 
 <h2 id="cybersecurity-testbed-environment">Cybersecurity Testbed Environment</h2>
 
 <p>Another PNNL project I’m involved with his developing a nuclear power plant testbed environment for <a href="https://nuclearenergy.pnnl.gov/cybersecurity.stm">cybersecurity awareness training</a>.</p>
 
-<p>What I’ve worked on:</p>
+<p>What I’ve been working on:</p>
 
 <ul>
-  <li>OpenStack</li>
-  <li>Security Onion</li>
-  <li>Windows Domain Controller</li>
+  <li>OpenStack VMs</li>
   <li>Apache web servers</li>
+  <li>PowerShell and Python to simulate NPCs</li>
 </ul>
+
+<h1 id="other-work">Other work</h1>
+
+<p>These are a few other projects I was involved in recently:</p>
 
 <h2 id="industrial-control-systems-cybersecurity-lab-book">Industrial Control Systems Cybersecurity Lab Book</h2>
 
@@ -42,6 +45,7 @@
   <li>multiple networks with routers and switches</li>
   <li>Raspberry Pi with DNS and DHCP configured to simulate an ISP</li>
   <li>PLCs programmed with Ladder Logic</li>
+  <li>Damn Vulnerable Web Application</li>
 </ul>
 
 <p>After the initial set-up, I have been working through all the labs that were already written to ensure they are written accurately. I have also modified and written several additional labs, and integrated the Damn Vulnerable Web Application with a customized front-end for multiple labs and courses.</p>
@@ -56,11 +60,11 @@
 
 <p><img src="/assets/images/work-progress/cyberhawks-homepage.gif" alt="Cyberhawks Home Page" class="center-image" /></p>
 
-<p>Clubs can also use Canvas for administration, and recently this has become a new requirement for all clubs at CBC. As president, I have been overseeing and directing the planning and implementation of creating a user-friendly Canvas experience for new and returning club members alike. Since the courses at CBC are primarily aimed at teaching conceptual knowledge, my goal as the Cyberhaws president is to provide the best opportunities for applied learning. Our Canvas shell will have myriad resources and challenges for members to extend themselves outside of the classroom and challenge themselves.</p>
+<p>Clubs can also use Canvas for administration, and recently this has become a new requirement for all clubs at CBC. As president, I oversaw and directed the planning and implementation of creating a user-friendly Canvas experience for new and returning club members alike. Since the courses at CBC are primarily aimed at teaching conceptual knowledge, my goal as the Cyberhaws president was to provide the best opportunities for applied learning.</p>
 
 <h2 id="college-club-charter-draft">College Club Charter Draft</h2>
 
-<p>Another work in progress for me as Cyberhawks president is drafting a club charter. If the club ever had a charter before, it’s nowhere to be found. Since I obviously won’t be president forever, I want to set the club and its leaders up for success now and in the future. So I have been working hard at writing a charter that outlines the club’s mission and the policies and procedures for administration.</p>
+<p>Another work in progress for me as Cyberhawks president was drafting a club charter. If the club ever had a charter before, it’s nowhere to be found. Since I obviously wasn’t going to be president forever, I wanted to set the club and its leaders up for success now and in the future. So I worked hard to write a charter that outlines the club’s mission and the policies and procedures for administration.</p>
 
 <p><img src="/assets/images/work-progress/cyberhawks-charter.png" alt="Cyberhawks Charter" /></p>
 :ET

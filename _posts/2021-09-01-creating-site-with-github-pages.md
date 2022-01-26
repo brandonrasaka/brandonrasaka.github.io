@@ -26,13 +26,43 @@ If you want to create a website similar to this one, here is a guide for how to 
 
 ## Install Jekyll
 
-1. Follow Jekyll’s official guides [here](https://jekyllrb.com/docs/installation/) to install Jekyll and its dependencies
+> Note: it's actually recommended you use a Linux machine for Jekyll, but I'm using Windows and these instructions are for Windows.
 
-1. If on Windows, open PowerShell or Command Prompt and navigate to your GitHub repo directory
+1. First you'll need to make sure you have Git installed, which you can download at [gitforwindows.org](https://gitforwindows.org/). Just click the download button and run the installer.
 
-1. Bundle the site’s contents and make it available on a local server
+    > There are a lot of options in this installer, which I'm not going to go through for this post because most of them are irrelevant to Jekyll.
 
-    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">></span> bundle exec jekyll serve</code></pre>
+    * You'll want to at least make sure you check the Git BASH Here component
+
+    ![Git BASH Here component](/assets/images/github-pages/git-install-1.png)
+
+1. Download the recommended RubyInstaller + DevKit from the RubyInstaller Downloads page. At the time that I did this, the documentation on the page recommended the **Ruby+Devkit 2.7.X (x64)** installer for new users.
+
+1. Run the installer after it finishes downloading. On the last step, make sure the `ridk install` box is checked. This will open a Command Prompt shell and begin another script.
+
+    ![Ruby Installer script](/assets/images/github-pages/ruby-install-2.png)
+
+1. In the Command Prompt, type `1` then hit `ENTER`. When that finishes, enter `2`, then `3` after that.
+
+1. After the last step, exit the window that ran the scripts, but then open another Command Prompt window. Verify that Ruby and Gem are both installed using these commands:
+
+    <pre>
+    <code><span style="color:rgba(255, 255, 255, 0.5)">></span> ruby -v</code>
+    <code><span style="color:rgba(255, 255, 255, 0.5)">></span> gem -v</code></pre>
+
+1. Now install Jekyll, then verify:
+
+    <pre>
+    <code><span style="color:rgba(255, 255, 255, 0.5)">></span> gem install jekyll bundler</code>
+    <code><span style="color:rgba(255, 255, 255, 0.5)">></span> jekyll -v</code></pre>
+
+1. Close Command Prompt and open Git BASH, then navigate to the directory with your GitHub repo and enter the following command:
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">></span> bundle install</code></pre>
+
+1. Now bundle the site’s contents and make it available on a local server:
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> bundle exec jekyll serve</code></pre>
 
 ## Get the *Hacker* Theme and Start Customizing
 

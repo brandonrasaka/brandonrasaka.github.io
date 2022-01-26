@@ -1,0 +1,262 @@
+I"Y<p>If you want to create a website similar to this one, here is a guide for how to do it. With GitHub, you can create and host a website for free! Though you don’t have to use Jekyll, I have found it to be best option and doesn’t require a ton of HTML and CSS. Instead, Jekyll uses YAML and Markdown. Don’t worry if you don’t know either one, I don’t either, not really! I know just enough to get by in creating my website, then I look up anything I don’t know. (Google-Fu is a necessary skill to have for any developer!)</p>
+
+<h2 id="set-up-your-github-repository">Set up your GitHub Repository</h2>
+
+<ol>
+  <li>
+    <p>Create GitHub account. My username is just my first and last name: <em>brandonrasaka</em></p>
+  </li>
+  <li>
+    <p>Create new repo and name it <code class="language-plaintext highlighter-rouge">[username].github.io</code></p>
+
+    <blockquote>
+      <p>For example, mine is <code class="language-plaintext highlighter-rouge">brandonrasaka.github.io</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Download and install <a href="https://desktop.github.com/">GitHub Desktop</a></p>
+  </li>
+  <li>
+    <p>When prompted, sign in to GitHub</p>
+  </li>
+  <li>
+    <p>When it finishes installing, you will see a list of Your repositories, including the one you just made</p>
+  </li>
+  <li>
+    <p>Select it, then click the Clone button. This creates a new folder for storing all the files in the repo. Any changes you make in any file in the folder you can then “push” to the repo on GitHub</p>
+  </li>
+</ol>
+
+<p><img src="/assets/images/github-pages/github-desktop-start.png" alt="Select repo from GitHub Desktop start screen" /></p>
+
+<h2 id="install-jekyll">Install Jekyll</h2>
+
+<blockquote>
+  <p>Note: it’s actually recommended you use a Linux machine for Jekyll, but I’m using Windows and these instructions are for Windows.</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>First you’ll need to make sure you have Git installed, which you can download at <a href="https://gitforwindows.org/">gitforwindows.org</a>. Just click the download button and run the installer.</p>
+
+    <blockquote>
+      <p>There are a lot of options in this installer, which I’m not going to go through for this post because most of them are irrelevant to Jekyll.</p>
+    </blockquote>
+
+    <ul>
+      <li>You’ll want to at least make sure you check the Git BASH Here component</li>
+    </ul>
+
+    <p><img src="/assets/images/github-pages/git-install-1.png" alt="Git BASH Here component" /></p>
+  </li>
+  <li>
+    <p>Download the recommended RubyInstaller + DevKit from the RubyInstaller Downloads page. At the time that I did this, the documentation on the page recommended the <strong>Ruby+Devkit 2.7.X (x64)</strong> installer for new users.</p>
+  </li>
+  <li>
+    <p>Run the installer after it finishes downloading. On the last step, make sure the <code class="language-plaintext highlighter-rouge">ridk install</code> box is checked. This will open a Command Prompt shell and begin another script.</p>
+
+    <p><img src="/assets/images/github-pages/ruby-install-2.png" alt="Ruby Installer script" /></p>
+  </li>
+  <li>
+    <p>In the Command Prompt, type <code class="language-plaintext highlighter-rouge">1</code> then hit <code class="language-plaintext highlighter-rouge">ENTER</code>. When that finishes, enter <code class="language-plaintext highlighter-rouge">2</code>, then <code class="language-plaintext highlighter-rouge">3</code> after that.</p>
+  </li>
+  <li>
+    <p>After the last step, exit the window that ran the scripts, but then open another Command Prompt window. Verify that Ruby and Gem are both installed using these commands:</p>
+
+    <pre>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> ruby -v</code>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> gem -v</code></pre>
+  </li>
+  <li>
+    <p>Now install Jekyll, then verify:</p>
+
+    <pre>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> gem install jekyll bundler</code>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> jekyll -v</code></pre>
+  </li>
+  <li>
+    <p>Close Command Prompt and open Git BASH, then navigate to the directory with your GitHub repo and enter the following command:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> bundle install</code></pre>
+  </li>
+  <li>
+    <p>Now bundle the site’s contents and make it available on a local server:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> bundle exec jekyll serve</code></pre>
+  </li>
+</ol>
+
+<h2 id="get-the-hacker-theme-and-start-customizing">Get the <em>Hacker</em> Theme and Start Customizing</h2>
+
+<ol>
+  <li>
+    <p>Download <em>Hacker</em> theme from <a href="https://github.com/pages-themes/hacker">https://github.com/pages-themes/hacker</a></p>
+
+    <blockquote>
+      <p>You can obviously pick your own theme and don’t have to use this one. There are a number of sources for downloading Jekyll themes, which you can Google-Fu for. Also, the <a href="https://jekyllrb.com/docs/themes/">Jekyll documentation site</a> has a list of theme sources as well.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Extract the contents of the download to your repo folder</p>
+  </li>
+  <li>
+    <p>Navigate your web browser to <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> or <code class="language-plaintext highlighter-rouge">127.0.0.1:4000</code>. You should see the default home page of the hacker theme.</p>
+  </li>
+  <li>
+    <p>Now it’s time to make changes to suit your needs. For this tutorial, I’ll be giving you the steps that I took to get my site how I like it, so make sure to tailor yours as needed. We’re going to be writing and editing files, so you’ll want a good text editor. Personally, I prefer to use <a href="https://code.visualstudio.com/download">VS Code</a>, but <a href="https://atom.io/">Atom</a> or <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a> work great too.</p>
+  </li>
+  <li>
+    <p>From the root directory, open the <code class="language-plaintext highlighter-rouge">_config.yml</code> file. Edit its contents like shown below, but obviously change the information to match your needs, then save the file.</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="na">title</span><span class="pi">:</span> <span class="s">Brandon_Rasaka</span>
+ <span class="na">description</span><span class="pi">:</span> <span class="s">Get to know me and check out some of the work I've done.</span>
+ <span class="na">show_downloads</span><span class="pi">:</span> <span class="no">true</span>
+ <span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-theme-hacker</span>
+ <span class="na">name</span><span class="pi">:</span> <span class="s">Brandon_Rasaka</span>
+</code></pre></div>    </div>
+
+    <blockquote>
+      <p>There are loads of more options you can specify in this file, but this is all I have for my simple site, and it’s the basics you’ll need for yours.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>If you refresh your browser page, you should already see some changes. For example, the top line on the page (as well as the name of the site in the browser tab) will match the <code class="language-plaintext highlighter-rouge">title</code> value, and the second line will match the <code class="language-plaintext highlighter-rouge">description</code> value.</p>
+  </li>
+  <li>
+    <p>Now let’s customize your homepage. Find the <code class="language-plaintext highlighter-rouge">index.md</code> file and copy it, renaming it <code class="language-plaintext highlighter-rouge">template.md</code>.</p>
+
+    <blockquote>
+      <p>You don’t actually have to copy it, but I find it helpful to keep a local copy of the style guide.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>In <code class="language-plaintext highlighter-rouge">index.md</code>, notice the first few lines are surrounded by thre dashes <code class="language-plaintext highlighter-rouge">---</code>. This is the front matter for your page. Every page in your site will contain front matter. My site’s home page (index.md) has the following front matter:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">---</span>
+ <span class="s">layout</span><span class="err">:</span> <span class="s">default</span>
+ <span class="s">title</span><span class="err">:</span> <span class="s">Home</span>
+ <span class="s">nav_order</span><span class="err">:</span> <span class="m">1</span>
+ <span class="s">---</span>
+</code></pre></div>    </div>
+
+    <p>Let me explain what each of these means.</p>
+
+    <ul>
+      <li>
+        <p>Layout: There are different layout templates, usually multiple styles with each Jekyll theme. The Hacker theme has only two layouts that are nearly identical: default and post. The template for these is stored in the <code class="language-plaintext highlighter-rouge">_layouts</code> directory as HTML files, but there are several variables and scripts that use the <em>Liquid</em> language to call pages and variable from elsewhere in the site. For example, the <code class="language-plaintext highlighter-rouge">default.html</code> layout has this line:</p>
+
+        <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>header.html<span class="p">%}</span>
+</code></pre></div>        </div>
+
+        <p>This tells it to insert the contents of <code class="language-plaintext highlighter-rouge">_includes/header.html</code> at that point, which itself is more HTML. So you can nest HTML within HTML using these variables.</p>
+      </li>
+      <li>
+        <p>Title: This is pretty self-explanatory. It’s the title of the page. But more importantly, it’s also a variable that can be called elsewhere. For example, my <code class="language-plaintext highlighter-rouge">_includes/header.html</code> file contains the following loop:</p>
+
+        <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;nav class="main-nav"&gt;
+  &lt;ul&gt;
+          <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">navigation_pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">html_pages</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="p">:</span><span class="w"> </span><span class="s1">'nav_order'</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">navigation_pages</span><span class="w"> </span><span class="p">%}</span>
+              <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">nav_order</span><span class="w"> </span><span class="p">%}</span>
+                  &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">}}</span>" <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">%}</span> class="active"<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
+              <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+      &lt;/ul&gt;
+  &lt;/nav&gt;
+</code></pre></div>        </div>
+
+        <p>I’m not going to explain every element in this bit of code, but notice the <code class="language-plaintext highlighter-rouge">{{ p.title }}</code> in the <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> line. That’s part of an If-THEN statement in a FOR loop that is calling each Markdown (.md) page <code class="language-plaintext highlighter-rouge">p</code> in the root directory (known as navigation pages) and using their <code class="language-plaintext highlighter-rouge">title</code> variables as the name of each link in the navigation bar in the header of every page.</p>
+      </li>
+      <li>
+        <p>nav_order: I’ll be honest, I don’t remember if this was part of the default front matter when I downloaded the theme, or if it’s something I added later. But this tells the above loop in which order to display the links for each navigation page. So my home page (index.md) has <code class="language-plaintext highlighter-rouge">nav_order: 1</code>, my <em>About Me</em> page (about.md) has <code class="language-plaintext highlighter-rouge">nav_order: 2</code>, and so on.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Below the front matter you can use Markdown language to fill in your home page with the content you want, following the theme.md page as a guide. The beauty of using Jekyll is that you don’t have to write HTML for every single page. The more HTML, CSS, Javascript, Liquid, Markdown, and YAML you know, the more creative you can get. But with a pre-made theme you can get to work with very little extra effort if your knowledge of these languages isn’t up to snuff. I’m still pretty new to all of these languages, and yet I built this website!</p>
+
+    <p>I <em>did</em> tweak my header quite a bit, so I had to tinker with the HTML and CSS quite a bit to get it how I liked it, so my header won’t be quite the same as yours even if you’re using the Hacker theme.</p>
+  </li>
+  <li>
+    <p>At this point you can make as many navigation pages as you like. Just give them a <code class="language-plaintext highlighter-rouge">.md</code> extension and store them in the repo’s root directory. Make sure to edit the front matter appropriately and you’re good to go!</p>
+  </li>
+</ol>
+
+<h2 id="start-blogging">Start Blogging</h2>
+
+<p>Okay, so now you’ve got navigation pages, it’s time to start blogging. Now, I don’t use my website as a blog, per se, but I use the blogging functionality. As you can see, I use it to post my projects and tutorials. But Jekyll has some great functionality for blogging.</p>
+
+<ol>
+  <li>
+    <p>To write your first blog post, make a new Markdown file in the <code class="language-plaintext highlighter-rouge">_posts</code> subdirectory, giving it a name with the date for a suffix in the format <code class="language-plaintext highlighter-rouge">yyyy-mm-dd</code>. For example, the filename for this page is <code class="language-plaintext highlighter-rouge">2021-09-01-creating-site-with-github-pages.md</code>.</p>
+  </li>
+  <li>
+    <p>Give the page some front matter. Again, using this page as an example, the front matter is</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">---</span>
+ <span class="s">layout</span><span class="err">:</span> <span class="s">post</span>
+ <span class="s">title</span><span class="err">:</span> <span class="s2">"</span><span class="s">Creating</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">Website</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">GitHub</span><span class="nv"> </span><span class="s">Pages</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Jekyll"</span>
+ <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:year/:month/:day/:title/</span>
+ <span class="s">---</span>
+</code></pre></div>    </div>
+
+    <p>The layout and title variables are the same as before, but now there’s a new one: permalink. This tells the site what the URL for this page (after the domain name) should be, which you can verify by checking the URL in your browser right now.</p>
+
+    <p><img src="/assets/images/github-pages/url-example.png" alt="URL example" /></p>
+  </li>
+  <li>
+    <p>Just like with the navigation pages, here’s where you can enter your post’s content.</p>
+  </li>
+</ol>
+
+<h2 id="add-social-icons">Add Social Icons</h2>
+
+<p>I have social media icons in my footer that are links to my profiles on the respective sites. I use Font Awesome for these icons, which is a collections of icons, many versions of which are free. Generally, to use Font Awesome icons, you would include a certain CSS tag within the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag of your HTML, then you would link to the icon you want within the body. With Jekyll, you do the same but instead you’re going to add it to your layout. Because you’re using Markdown for all your pages.</p>
+
+<ol>
+  <li>
+    <p>Open the <code class="language-plaintext highlighter-rouge">_layouts/default.html</code> page.</p>
+  </li>
+  <li>
+    <p>Within the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> tag, add the following:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>To get yours like mine, open the <code class="language-plaintext highlighter-rouge">_includes/footer.html</code> page (if the theme doesn’t come with a footer page, then create one)</p>
+  </li>
+  <li>
+    <p>Add the following, but changing the URLs to match your own profiles and email address:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;p&gt;</span>
+     <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"social"</span> <span class="na">href=</span><span class="s">"mailto:brandonrasaka@protonmail.com"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-envelope"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+     <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"social"</span> <span class="na">href=</span><span class="s">"https://www.linkedin.com/in/brandonrasaka/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linkedin-square"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+     <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"social"</span> <span class="na">href=</span><span class="s">"https://github.com/brandonrasaka/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-github"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+     <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"social"</span> <span class="na">href=</span><span class="s">"https://www.youtube.com/c/BrandonRasaka"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-youtube-play"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+ <span class="nt">&lt;/p&gt;</span>
+</code></pre></div>    </div>
+
+    <p>This will add icons for email, LinkedIn, GitHub, and YouTube. Plus, each icon is a link to my profile on each site. You might want to add others, so here’s a <a href="https://aksakalli.github.io/jekyll-doc-theme/docs/font-awesome/">list of Font Awesome icons and their names</a>. To use one, just make sure the name listed follows the <code class="language-plaintext highlighter-rouge">fa-</code> in the <code class="language-plaintext highlighter-rouge">&lt;i&gt;</code> tag. For example, if I wanted to use the Reddit icon (<i class="fa fa-reddit-alien"></i>), I would type:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-reddit-alien"</span><span class="nt">&gt;&lt;/i&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>That’s the basics! I hope this is a helpful tutorial for anyone looking to make and host a free website on GitHub! If you are using the Hacker theme, I’ve added a couple additional elements to my <code class="language-plaintext highlighter-rouge">theme.md</code> page beyond what the theme originally has. They are listed below.</p>
+
+<p>Have fun!</p>
+
+<h2 id="additional-hacker-theme-elements">Additional Hacker Theme Elements</h2>
+
+<p>To see the syntax for these, feel free to download my version of <code class="language-plaintext highlighter-rouge">theme.md</code> from my <a href="https://github.com/brandonrasaka/brandonrasaka.github.io/blob/master/theme.md">GitHub</a>.</p>
+
+<p>Use HTML and CSS to make a Linux-style Terminal box</p>
+
+<pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> cat /etc/passwd</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">{% Liquid tags within a Jekyll post %}</code></p>
+:ET

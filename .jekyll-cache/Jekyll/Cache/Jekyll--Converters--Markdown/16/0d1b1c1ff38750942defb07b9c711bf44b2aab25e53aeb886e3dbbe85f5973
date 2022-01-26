@@ -1,4 +1,4 @@
-I"�O<p>If you want to create a website similar to this one, here is a guide for how to do it. With GitHub, you can create and host a website for free! Though you don’t have to use Jekyll, I have found it to be best option and doesn’t require a ton of HTML and CSS. Instead, Jekyll uses YAML and Markdown. Don’t worry if you don’t know either one, I don’t either, not really! I know just enough to get by in creating my website, then I look up anything I don’t know. (Google-Fu is a necessary skill to have for any developer!)</p>
+I"Y<p>If you want to create a website similar to this one, here is a guide for how to do it. With GitHub, you can create and host a website for free! Though you don’t have to use Jekyll, I have found it to be best option and doesn’t require a ton of HTML and CSS. Instead, Jekyll uses YAML and Markdown. Don’t worry if you don’t know either one, I don’t either, not really! I know just enough to get by in creating my website, then I look up anything I don’t know. (Google-Fu is a necessary skill to have for any developer!)</p>
 
 <h2 id="set-up-your-github-repository">Set up your GitHub Repository</h2>
 
@@ -31,17 +31,58 @@
 
 <h2 id="install-jekyll">Install Jekyll</h2>
 
+<blockquote>
+  <p>Note: it’s actually recommended you use a Linux machine for Jekyll, but I’m using Windows and these instructions are for Windows.</p>
+</blockquote>
+
 <ol>
   <li>
-    <p>Follow Jekyll’s official guides <a href="https://jekyllrb.com/docs/installation/">here</a> to install Jekyll and its dependencies</p>
+    <p>First you’ll need to make sure you have Git installed, which you can download at <a href="https://gitforwindows.org/">gitforwindows.org</a>. Just click the download button and run the installer.</p>
+
+    <blockquote>
+      <p>There are a lot of options in this installer, which I’m not going to go through for this post because most of them are irrelevant to Jekyll.</p>
+    </blockquote>
+
+    <ul>
+      <li>You’ll want to at least make sure you check the Git BASH Here component</li>
+    </ul>
+
+    <p><img src="/assets/images/github-pages/git-install-1.png" alt="Git BASH Here component" /></p>
   </li>
   <li>
-    <p>If on Windows, open PowerShell or Command Prompt and navigate to your GitHub repo directory</p>
+    <p>Download the recommended RubyInstaller + DevKit from the RubyInstaller Downloads page. At the time that I did this, the documentation on the page recommended the <strong>Ruby+Devkit 2.7.X (x64)</strong> installer for new users.</p>
+  </li>
+  <li>
+    <p>Run the installer after it finishes downloading. On the last step, make sure the <code class="language-plaintext highlighter-rouge">ridk install</code> box is checked. This will open a Command Prompt shell and begin another script.</p>
+
+    <p><img src="/assets/images/github-pages/ruby-install-2.png" alt="Ruby Installer script" /></p>
+  </li>
+  <li>
+    <p>In the Command Prompt, type <code class="language-plaintext highlighter-rouge">1</code> then hit <code class="language-plaintext highlighter-rouge">ENTER</code>. When that finishes, enter <code class="language-plaintext highlighter-rouge">2</code>, then <code class="language-plaintext highlighter-rouge">3</code> after that.</p>
+  </li>
+  <li>
+    <p>After the last step, exit the window that ran the scripts, but then open another Command Prompt window. Verify that Ruby and Gem are both installed using these commands:</p>
+
+    <pre>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> ruby -v</code>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> gem -v</code>
+ </pre>
+  </li>
+  <li>
+    <p>Now install Jekyll, then verify:</p>
+
+    <pre>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> gem install jekyll bundler</code>
+ <code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> jekyll -v</code>
+ </pre>
+  </li>
+  <li>
+    <p>Theoretically you should be able to open PowerShell or Command Prompt and navigate to your GitHub repo directory; however, this didn’t work for me. What did work for me was Git BASH instead of PowerShell. This opens a BASH terminal.</p>
   </li>
   <li>
     <p>Bundle the site’s contents and make it available on a local server</p>
 
-    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">&gt;</span> bundle exec jekyll serve</code></pre>
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> bundle exec jekyll serve</code></pre>
   </li>
 </ol>
 
@@ -92,9 +133,9 @@
     <p>In <code class="language-plaintext highlighter-rouge">index.md</code>, notice the first few lines are surrounded by thre dashes <code class="language-plaintext highlighter-rouge">---</code>. This is the front matter for your page. Every page in your site will contain front matter. My site’s home page (index.md) has the following front matter:</p>
 
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">---</span>
- <span class="s">layout</span><span class="pi">:</span> <span class="s">default</span>
- <span class="na">title</span><span class="pi">:</span> <span class="s">Home</span>
- <span class="na">nav_order</span><span class="pi">:</span> <span class="m">1</span>
+ <span class="s">layout</span><span class="err">:</span> <span class="s">default</span>
+ <span class="s">title</span><span class="err">:</span> <span class="s">Home</span>
+ <span class="s">nav_order</span><span class="err">:</span> <span class="m">1</span>
  <span class="s">---</span>
 </code></pre></div>    </div>
 
@@ -153,8 +194,8 @@
     <p>Give the page some front matter. Again, using this page as an example, the front matter is</p>
 
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">---</span>
- <span class="s">layout</span><span class="pi">:</span> <span class="s">post</span>
- <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Creating</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">Website</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">GitHub</span><span class="nv"> </span><span class="s">Pages</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Jekyll"</span>
+ <span class="s">layout</span><span class="err">:</span> <span class="s">post</span>
+ <span class="s">title</span><span class="err">:</span> <span class="s2">"</span><span class="s">Creating</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">Website</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">GitHub</span><span class="nv"> </span><span class="s">Pages</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Jekyll"</span>
  <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:year/:month/:day/:title/</span>
  <span class="s">---</span>
 </code></pre></div>    </div>

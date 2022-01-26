@@ -1,0 +1,188 @@
+I"�'<p>The National Cyber League (NCL) is a fun (mostly) Jeopardy style capture the flag (CTF) competition that has two seasons every year: the Spring Season and the Fall Season. NCL is only for college students and is a <em>great</em> learning opportunity. At the time of this writing, I am in my last few weeks of school getting my BAS in Cybersecurity, so this Fall Season is my last time playing. I wrote this post as a way to give newer players some basic tips to help springboard your learning.</p>
+
+<p>First of all, don’t spend too much time on any one challenge. Try it, spend a few minutes on it, then move on. Come back later. Now, for the rest I’ve broken it down by category.</p>
+
+<h1 id="open-source-intelligence-osint">Open Source Intelligence (OSINT)</h1>
+
+<ul>
+  <li>
+    <p>Google is your friend! Learn how to use the right search terms to find what you want, and quickly</p>
+  </li>
+  <li>
+    <p>Reverse image search</p>
+  </li>
+</ul>
+
+<h1 id="cryptography">Cryptography</h1>
+
+<ul>
+  <li>
+    <p><a href="https://www.dcode.fr/identification-chiffrement">dCode Cipher Recognizer</a>: This website is in French, but Chrome (and I think Firefox) have the ability to translate it for you. This link specifically takes you to the Cipher Recognizer which will help you narrow down what cipher was used. It’s not always accurate, but a great help! It also has LOTS of other cipher tools, many of which have a brute force option. This site also has several pictograph ciphers, but using a reverse image search will help you determine which one to use.</p>
+  </li>
+  <li><a href="http://rumkin.com/tools/cipher/">Rumkin</a>: This has a big list of common ciphers. Sometimes you just have to guess and check several different ones until you get familiar with them. NCL typically uses the following:
+    <ul>
+      <li>
+        <p>Atbash</p>
+      </li>
+      <li>
+        <p>Base64</p>
+      </li>
+      <li>
+        <p>Caesarian Shift</p>
+      </li>
+      <li>
+        <p>Morse Code</p>
+      </li>
+      <li>
+        <p>Letter Numbers</p>
+      </li>
+      <li>
+        <p>Railfence</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://crypto.interactive-maths.com/frequency-analysis-breaking-the-code.html">CryptoCorner Frequency Analysis</a>: This is just one of many tools that CryptoCorner has. It lets you input the ciphered message, and then test different substitutions. It also tells you the most common letters and letter patterns in the English language, then compares them with the most common ciphered letters and patterns.</p>
+  </li>
+  <li><a href="https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html">RapidTables</a>: This tool translates different number systems between each other, such as ASCII, hexadecimal, binary, and Base64. Don’t forget the links listed along the right side that are also very helpful!</li>
+</ul>
+
+<h1 id="password-cracking">Password Cracking</h1>
+
+<h2 id="generating-hashes">Generating hashes</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.md5hashgenerator.com/">Online tool</a>: This is one of many tools online that can generate hashes. This one specifically generates MD5 and SHA1 hash values.</p>
+  </li>
+  <li>
+    <p>I recommend learning as much Linux as possible, therefore you can use the terminal in Ubuntu or Kali:</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">echo -n [string] | md5sum</code></p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">echo -n [string] | sha1sum</code></p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">echo -n [string] | sha256sum</code></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="cracking-easy-passwords">Cracking easy passwords</h2>
+
+<p>The quickest method for the “Easy” challenges is to copy and paste the hash into an online tool such as CrackStation.</p>
+
+<h2 id="cracking-passwords-with-the-rockyou-list">Cracking passwords with the rockyou list</h2>
+
+<p>Use Hashcat or John the Ripper in Kali Linux. My favorite is Hashcat. Be aware, this will take some time depending on your system’s resources. Also be aware that your system can potentially overheat, again depending on your resources. It has never happened to me on an NCL challenge, even running on a VM on my laptop, but it is a possibility. Here’s how I use Hashcat:</p>
+
+<ul>
+  <li>
+    <p>Create a new text file called to-crack.txt and copy/paste the hashes, one per line.</p>
+  </li>
+  <li>
+    <p>Kali comes with the rockyou list, but it is zipped by default, so if you haven’t unzipped it yet, run this command:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> sudo gzip -d /usr/share/wordlists/rockyou.txt.gz</code></pre>
+  </li>
+  <li>
+    <p>With the rockyou list unpackaged, you can run Hashcat:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> hashcat -a 0 -m 500 to-crack.txt /usr/share/wordlists/rockyou.txt -o cracked.txt</code></pre>
+
+    <ul>
+      <li>Here’s the explanation:</li>
+    </ul>
+
+    <p><img src="/assets/images/hashcat-explanation.png" alt="Hashcat Explanation" /></p>
+  </li>
+</ul>
+
+<h2 id="cracking-passwords-with-a-custom-wordlist">Cracking passwords with a custom wordlist:</h2>
+
+<p>NCL usually has a challenge that says something like “It appears that the passwords are all in the format: “SKY-BMYS-“ followed by 4 digits. Can you crack them?” For this, you have to create your own custom wordlist. There are various tools, like Crunch, that will do this but require some learning to get what you actually want. I just use Excel, here’s how:</p>
+
+<ul>
+  <li>
+    <p>Open Excel and enter <strong>0</strong> into cell <em>A1</em></p>
+  </li>
+  <li>
+    <p>Highlight A1, then from the <em>Ribbon</em> &gt; <em>Home</em> tab &gt; <em>Editing</em> section, select <strong>Fill</strong> &gt; <strong>Series</strong></p>
+  </li>
+  <li>
+    <p>Select <em>Series in</em> <strong>Columns</strong>, <em>Type</em> <strong>Linear</strong>, <em>Step Value:</em> <strong>1</strong>, <em>Stop Value:</em> <strong>9999</strong>, then click <strong>OK</strong></p>
+  </li>
+  <li>
+    <p>In cell B1, enter the following: <code class="language-plaintext highlighter-rouge">=CONCATENATE("SKY-BMYS-",TEXT(A1,"0000"))</code></p>
+
+    <ul>
+      <li>Make sure the letters between the dashes match whatever the actual challenge is.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Double-click the Fill Handle in the bottom-right corner of cell B1 to auto fill the function all the way down.</p>
+  </li>
+  <li>
+    <p>Copy the whole list of values and paste them into Notepad, then save the file as something meaningful, like <code class="language-plaintext highlighter-rouge">sky.txt</code></p>
+  </li>
+  <li>
+    <p>Transfer the file to Kali (how you do this will depend on how you’re using Kali. If you’re using a Kali VM in VirtualBox, you can use the VirtualBox File Manager)</p>
+  </li>
+  <li>
+    <p>This step might not be necessary, but as a precaution it’s a good idea to make sure a text file created in Windows will be properly read in Linux, so assuming you’re current working directory is the one with the sky.txt file, enter this command into the terminal: <code class="language-plaintext highlighter-rouge">dos2linux sky.txt</code></p>
+  </li>
+  <li>
+    <p>Now run Hashcat just like above but change the file with hashes (making sure to create such a file with the relevant hashes) and the wordlist. You might also want to change the name of the output file, but you don’t have to.</p>
+  </li>
+</ul>
+
+<h1 id="log-analysis">Log Analysis</h1>
+
+<p>Some log analysis can be done in Excel, by simply opening the files in Excel and applying sorts and filters. A really handy tool in Excel is Tables. On the <em>Ribbon &gt; Home tab &gt; Styles</em> section, click <strong>Format as Table</strong>, then select a color scheme. If your data already has headers, check the box. The dropdown arrows for each column make sorting and filtering very easy and user-friendly.</p>
+
+<p>However, Excel can only get you so far. To really take off with Log Analysis (and be more efficient), you need to learn a few bash commands in Linux. I’m not going to give detailed instruction on these tools, just a quick blurb about what they do. It’s up to you to go learn how to apply them.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">grep</code>: this searches files for a specified string, but it gets really handy with Regular Expressions, which is a way of using wildcards and other shorthand to find strings that match a specified pattern.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sort</code>: just like it sounds, this sorts the input. By default, it sorts alphabetically, but you can specify other options.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">uniq</code>: this will filter out duplicates, but only if they appear next to each other sequentially. That’s why sort is used before uniq.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">wc</code>: Stands for ‘word count’ and counts words, characters, lines, etc. To make it count the number of lines, use wc -l</p>
+  </li>
+  <li>
+    <p>Pipes: Notice I didn’t format Pipes the same way as the other tools? That’s intentional. A pipe is not a program like the others, it’s a way of redirecting the output of a command and using it as the input for another command. So you can grep something, then you can sort the output by piping it to the sort command, then eliminate duplicate values by piping it to uniq, then count how many lines you’re left with by piping to wc. That would look something like this:</p>
+
+    <pre><code><span style="color:rgba(255, 255, 255, 0.5)">$</span> grep "GET" access.log | sort | uniq | wc -l</code></pre>
+  </li>
+</ul>
+
+<hr />
+
+<p>I have more tips coming soon in the following categories:</p>
+
+<ul>
+  <li>
+    <p>Network Traffic Analysis</p>
+  </li>
+  <li>
+    <p>Forensics</p>
+  </li>
+  <li>
+    <p>Web Application Exploitation</p>
+  </li>
+  <li>
+    <p>Enumeration and Exploitation</p>
+  </li>
+</ul>
+
+:ET
