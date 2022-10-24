@@ -26,7 +26,7 @@ In addition to these jobs, I also work for CBC as an adjunct instructor teaching
 
 Is it "cyber security" (two words) or "cybersecurity" (one word)?
 
-Most people probably couldn't care less, but pride myself on precise language. I went back and forth a lot, then I decided to settle on "cybersecurity" (one word), because that's the way it's use by NIST.
+Most people probably couldn't care less, but I pride myself on precise language. I went back and forth a lot, then I decided to settle on "cybersecurity" (one word), because that's the way it's use by NIST.
 
 So, how does someone with a master's in geology and six kids decide to go _back_ to school and get a degree in cybersecurity? Well, the short version of the story is this. After graduating with my MS degree, I spent 2.5 years applying for hundreds of positions related to geology. Geologist, staff geologist, assistant geologist, environmental planner, geographic information systems specialist, geology instructor (community college), etc.
 
